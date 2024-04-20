@@ -14,6 +14,14 @@
     height: 5rem;
     background-color: #fff;
 
+    @include mobile{
+        width: toRem(48);
+        height:   toRem(48);
+        bottom: 2rem;
+        right: 2rem;
+        border-radius: .8rem;
+    }
+
     &[darkmode=true]{
         background: rgba(0, 39, 191, 1);
     }

@@ -1,0 +1,174 @@
+@import "../../styles/main.scss";
+
+.home_container {
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+    position: relative;
+    padding: toRem(40) toRem(26) toRem(100) toRem(26);
+    // height: 259vh;
+    transition: background-color 0.5s ease;
+
+    @include mobile{
+        padding: toRem(40) toRem(45) toRem(100) toRem(45);
+    }
+
+    &[darkmode = true]{
+        background: rgba(207, 246, 255, 1);
+        transition: background-color 0.5s ease;
+    }
+    .contact_btn {
+        align-self: flex-end;
+        background-color: #fff;
+        color: #1632A0;
+        padding: .8em 1.5em;
+        position: fixed;
+        box-shadow: 0px 0px 2px #000;
+        z-index: 10;
+        font-family: inherit;
+        font-weight: 400;
+        border-radius: 2rem;
+        &[darkmode = true]{
+            background: rgba(0, 39, 191, 1);
+            color: rgba(207, 246, 255, 1);
+            transition: background-color 0.5s ease;
+        }
+        @include mobile{
+            position: static;
+        }
+    }
+
+    .hero {
+        display: flex;
+        margin-top: toRem(100);
+        flex-direction: column;
+        height: 120vh;
+        position: relative;
+        justify-content: space-between;
+            @include respond-to-orientation(portrait){
+                height: 55vh;
+            }
+
+        .hero_text {
+            max-width: 44.5rem;
+            &[darkmode = true]{
+                color: rgba(18, 2, 215, 1);
+                transition: color 0.5s ease;
+            } 
+        }
+    }
+
+    .project{
+        position: relative;
+        z-index: 4;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        row-gap: 5rem;
+        flex-wrap: wrap;
+
+        @include respond-to-orientation(portrait){
+            flex-direction: column;
+        }
+
+        &_container{
+            width: calc(100% / 3);
+            @include respond-to-orientation(portrait){
+                width: 100%;
+            }            
+            img{
+                width: 100%;
+            }
+
+            .project_name{
+                font-size: 2rem;
+                font-weight: 300;
+                color: #fff;
+                margin-top: 2rem;
+                &[darkmode = true]{
+                    color: rgba(0, 0, 0, 1);
+                    transition: color 0.5s ease;
+                } 
+            }
+
+            .project_platform{
+                font-size: 1.5rem;
+                font-weight: 300;
+                color: rgba(118, 222, 255, 1);
+                margin-top: 1rem;
+                &[darkmode = true]{
+                    color: rgba(0, 0, 0, 1);
+                    transition: color 0.5s ease;
+                } 
+            }
+        }
+    }
+    .background {
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .background-0,
+    .background-2 {
+        z-index: 1;
+        top: toRem(500);
+        width: 40%;
+
+        @include  mobile{
+            top: toRem(650);
+        }
+
+        img{
+            width: 100%;
+            // height: toRem(702);
+        }
+
+    }
+
+    .background-0 {
+        left: 0;
+
+    }
+
+    .background-2 {
+        right: 0;
+    }
+
+    .background-1 {
+        align-self: center;
+        z-index: 0;
+        top: toRem(300);
+        width: 60%;
+        img{
+            width: 100%;
+        }
+        @include  mobile{
+            top: toRem(550);
+        }
+
+    }
+}
+
+
+.bounce{
+    // transform: translateY(-20px);
+    animation: easeOutElastic .3s ease-in-out;
+}
+
+@keyframes easeOutElastic {
+	0% {
+		transform: translateY(0px);
+	}
+
+	50%{
+        transform: translateY(-20px);
+    }
+
+	100% {
+		transform: translateY(0px);
+	}
+
+}

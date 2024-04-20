@@ -1,0 +1,40 @@
+@import "./breakpoints.scss";
+@mixin flex($jc, $ai, $gap) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+}
+
+@mixin flex_col($gap) {
+    flex-direction: column;
+    display: flex;
+    gap: $gap;
+}
+
+@function toRem($value) {
+    $remValue: (calc($value / 16)) + rem;
+    @return $remValue;
+}
+
+// Define a mixin for media query with orientation
+@mixin respond-to-orientation($orientation) {
+  @media only screen and (orientation: $orientation) {
+    @content;
+  }
+}
+
+// small screen
+@mixin mobile {
+  @media (max-width: 480px) {
+      @content;
+  }
+}
+
+
+// 
+@mixin tablets {
+  @media (mix-width: 768px) and (max-width: 991px) {
+      @content;
+  }
+}

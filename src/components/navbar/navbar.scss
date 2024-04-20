@@ -1,0 +1,57 @@
+@import '../../styles/main.scss';
+
+
+nav {
+    align-self: center;
+    display: flex;
+    height: 60px;
+    align-items: end;
+    padding-bottom: .7rem;
+    gap: toRem(25);
+    z-index: 10;
+    bottom: 5rem;
+    padding-inline: 2rem;
+    border-radius: 40px;
+    position: relative;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+
+    @include mobile{
+        bottom: 10rem;
+    }
+
+    .label_container{
+        position: absolute;
+        padding: 1rem;
+        background-color: #fff;
+        top: -5rem;
+        p{
+            text-align: center;
+            color: red;
+            
+        }
+    }
+    a, button {
+        background-color: $primary;
+        display: grid;
+        place-content: center;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+        z-index: 2;
+
+        img {
+            scale: .8;
+            // width: 1.5rem;
+            // height: 1.5rem;
+        }
+    }
+}
+
+.active {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 2px #000;
+}
+

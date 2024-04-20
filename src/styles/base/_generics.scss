@@ -1,0 +1,23 @@
+@import '../abstract/mixins.scss';
+
+.paragraph--1{
+    font-size: 1.125rem;
+    line-height: 1.74rem;
+    font-weight: 400;
+}
+
+.paragraph--2 {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+
+    @include mobile{
+        font-size: 1.3rem;
+    }
+}
+
+.paragraph--3{
+    font-size: 1.5rem;
+    line-height: 2.055rem;
+    font-weight: 400;
+}

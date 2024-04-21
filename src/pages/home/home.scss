@@ -8,12 +8,12 @@
     flex-direction: column;
     background-color: $primary;
     position: relative;
-    padding: toRem(40) toRem(26) toRem(100) toRem(26);
+    padding: toRem(40) toRem(90) toRem(150) toRem(90);
     // height: 259vh;
     transition: background-color 0.5s ease;
 
     @include mobile{
-        padding: toRem(40) toRem(45) toRem(100) toRem(45);
+        padding: toRem(40) toRem(25) toRem(100) toRem(25);
     }
 
     &[darkmode = true]{
@@ -49,11 +49,15 @@
         position: relative;
         justify-content: space-between;
             @include respond-to-orientation(portrait){
-                height: 55vh;
+                height: 40vh;
             }
 
         .hero_text {
             max-width: 44.5rem;
+
+            @include mobile{
+                max-width: 340px;
+            }
             &[darkmode = true]{
                 color: rgba(18, 2, 215, 1);
                 transition: color 0.5s ease;
@@ -81,6 +85,10 @@
             }            
             img{
                 width: 100%;
+
+                @include mobile{
+                    height: 365px;
+                }
             }
 
             .project_name{
@@ -118,12 +126,11 @@
         width: 40%;
 
         @include  mobile{
-            top: toRem(650);
+            top: toRem(500);
         }
 
         img{
             width: 100%;
-            // height: toRem(702);
         }
 
     }
@@ -146,7 +153,7 @@
             width: 100%;
         }
         @include  mobile{
-            top: toRem(550);
+            top: toRem(400);
         }
 
     }

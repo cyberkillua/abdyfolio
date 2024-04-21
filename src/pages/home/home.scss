@@ -82,13 +82,11 @@
             width: calc(100% / 3);
             @include respond-to-orientation(portrait){
                 width: 100%;
-            }            
+            } 
+            
             img{
                 width: 100%;
-
-                @include mobile{
-                    height: 365px;
-                }
+                object-fit: contain;
             }
 
             .project_name{

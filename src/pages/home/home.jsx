@@ -1,13 +1,12 @@
 import Navbar from '../../components/navbar/navbar';
 import ReturnBtn from '../../components/returnUp/returnUpBtn';
-import  { useSelector, useDispatch } from "react-redux"
-import { toggleDarkmode } from "../../state/themeProviderSlice"
-
+import  { useSelector } from "react-redux";
+import Button from "../../components/Button/button"
+import PageTransition from "../../components/page-transition/pageTransition"
 import './home.scss'
 
 const Home = () => {
     const darkmode = useSelector((state) => state.darkMode?.darkMode)
-    const dispatch = useDispatch()
 
     // console.log(darkmode)
     const Backgrounds = [
@@ -56,7 +55,7 @@ const Home = () => {
     ]
     return (
         <main className="home_container" darkmode={`${darkmode}`}>
-            <button className="contact_btn paragraph--1" darkmode={`${darkmode}`}>Contact Me</button>
+           <Button text={"contact me"} />
             <section className="hero">
                 <p className="paragraph--2 hero_text" darkmode={`${darkmode}`}>
                     I am a Designer and Product Manager currently at Fezzant.
@@ -64,7 +63,7 @@ const Home = () => {
                     I’m passionate about technology and what it can do for people.
                 </p>
 
-                <Navbar />
+                <Navbar iconColor={"rgba(255, 255, 255, 1)"} activeIconColor={"rgba(0, 39, 191, 1)"} />
             </section>
 
             <section className="project">
@@ -94,4 +93,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default PageTransition(Home);

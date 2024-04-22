@@ -1,0 +1,22 @@
+@import "../../styles/main.scss";
+
+.slide_in{
+    position: fixed;
+    z-index: 15;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:  #0f0f0f;
+    transform-origin: bottom;
+}
+
+.slide_out{
+    position: fixed;
+    z-index: 15;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:  #0f0f0f;
+    transform-origin: top;
+    // display: none;
+}

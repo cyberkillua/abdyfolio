@@ -7,6 +7,10 @@
     background: rgba(107, 0, 191, 1);
     transition: background 0.5s ease;
 
+    @include mobile{
+        padding: toRem(40) toRem(25) toRem(100) toRem(25);
+    }
+    
     &[darkmode = true]{
         background: rgba(241, 210, 255, 1);
         transition: background 0.5s ease;

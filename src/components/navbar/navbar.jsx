@@ -47,15 +47,15 @@ const Navbar = ({ color, iconColor, activeIconColor }) => {
         {
             name: "Projects",
             icon: <ProjectIcon color={iconColor} />,
-            link: "/home",
-            activeIcon: <HomeIcon color={"rgba(0, 49, 2, 1)"} />,
+            link: "/projects",
+            activeIcon: <ProjectIcon color={"rgba(107, 0, 191, 1)"} />,
             hovered: false,
             Darkicon: ""
         },
         {
             name: "Contact",
             icon: <ContactIcon color={iconColor} />,
-            link: "/home",
+            link:  "mailto:abdvlljsx@gmail.com",
             activeIcon: <HomeIcon color={"rgba(0, 49, 2, 1)"} />,
             hovered: false,
             Darkicon: ""

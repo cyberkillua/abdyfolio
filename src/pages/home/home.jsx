@@ -55,7 +55,7 @@ const Home = () => {
     ]
     return (
         <main className="home_container" darkmode={`${darkmode}`}>
-           <Button text={"contact me"} />
+           <Button text={"contact me"} darkmodeBG={"rgba(0, 39, 191, 1)"} darkmodeTX={"rgba(207, 246, 255, 1)"} />
             <section className="hero">
                 <p className="paragraph--2 hero_text" darkmode={`${darkmode}`}>
                     I am a Designer and Product Manager currently at Fezzant.

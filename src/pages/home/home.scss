@@ -60,12 +60,15 @@
 
         &_container{
             width: calc(100% / 3);
+            // overflow: hidden;
+            // border: 1px solid red;
             @include respond-to-orientation(portrait){
                 width: 100%;
             } 
             
-            img{
+            img, video{
                 width: 100%;
+                cursor: pointer;
                 object-fit: contain;
             }
 

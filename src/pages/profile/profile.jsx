@@ -1,21 +1,24 @@
 import Button from "../../components/Button/button"
 import Navbar from "../../components/navbar/navbar"
-import HomeIcon from "../../assets/home-icon"
+import { useEffect } from "react"
 import "./profile.scss"
-import PageTransition from  "../../components/page-transition/pageTransition"
-import  { useSelector } from "react-redux"
+import PageTransition from "../../components/page-transition/pageTransition"
+import { useSelector } from "react-redux"
 
 
 const Profile = () => {
     const darkmode = useSelector((state) => state.darkMode?.darkMode)
 
+    useEffect(() => {
+        document.body.style = darkmode ? "rgba(207, 246, 255, 1)" : " #1632A0";
+    },  [])
+
     return (
         <div className="profile" darkmode={`${darkmode}`}>
-            <Navbar color={" rgba(0, 49, 2, 1)"} iconColor={"rgba(255, 255, 255, 1)"} />
+            <Navbar iconColor={"rgba(255, 255, 255, 1)"} activeIconColor={"rgba(0, 39, 191, 1)"} />
             <div className="profile_wrapper">
                 <div className="profile_header">
-                    <Button text={"contact Me"} darkmodeBG={"rgba(0, 49, 2, 1)"} darkmodeTX={"rgba(221, 255, 215, 1)"} />
-                    {/* <HomeIcon color={"#ffffff"} /> */}
+                    <Button text={"contact me"} darkmodeBG={"rgba(0, 39, 191, 1)"} darkmodeTX={"rgba(207, 246, 255, 1)"} />
                 </div>
                 <main className="content">
                     <div className="content_left">

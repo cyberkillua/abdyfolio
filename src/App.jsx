@@ -5,11 +5,13 @@ import Profile from "./pages/profile/profile";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Projects from "./pages/projects/projects";
+import { split } from "./animations/text";
 
 function App() {
   const location = useLocation()
   useEffect(() => {
     scroll()
+    split()
   }, [])
   return (
     <AnimatePresence mode="wait">

@@ -41,14 +41,14 @@ const Navbar = ({ color, iconColor, activeIconColor }) => {
             icon: <ProfileIcon color={iconColor} />,
             link: "/profile",
             hovered: false,
-            activeIcon: <ProfileIcon color={"rgba(0, 49, 2, 1)"} />,
+            activeIcon: <ProfileIcon color={"rgba(0, 39, 191, 1)"} imgScale={imgScale} />,
             Darkicon: ""
         },
         {
             name: "Projects",
             icon: <ProjectIcon color={iconColor} />,
             link: "/projects",
-            activeIcon: <ProjectIcon color={"rgba(107, 0, 191, 1)"} />,
+            activeIcon: <ProjectIcon color={"rgba(0, 39, 191, 1)"} imgScale={imgScale} />,
             hovered: false,
             Darkicon: ""
         },

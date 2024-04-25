@@ -1,6 +1,6 @@
 @import '../abstract/mixins.scss';
 
-.paragraph--1{
+.paragraph--1 {
     font-size: 1.125rem;
     line-height: 1.74rem;
     font-weight: 400;
@@ -11,17 +11,27 @@
     line-height: 2.6rem;
     font-weight: 300;
 
-    @include mobile{
+    @include mobile {
         font-size: 1.5rem;
     }
 }
 
-.paragraph--3{
+.paragraph--3 {
     font-size: 1.5rem;
     line-height: 2.055rem;
     font-weight: 400;
 }
 
-ul{
+ul {
     list-style: none;
+}
+
+span.word_wrap {
+    overflow: hidden;
+    display: inline-block;
+}
+
+[data-animation="header"] span.word {
+    overflow-y: hidden;
+    position: relative;
 }

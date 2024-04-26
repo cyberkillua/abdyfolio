@@ -1,4 +1,5 @@
 @import '../abstract/mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
 
 .paragraph--1 {
     font-size: 1.125rem;
@@ -34,4 +35,23 @@ span.word_wrap {
 [data-animation="header"] span.word {
     overflow-y: hidden;
     position: relative;
+}
+
+.header--1{
+    font-family: "Manjari", sans-serif;
+    font-size: 3rem;
+    color: black;
+}
+
+.paragraph--4{
+    font-family: "Manjari", sans-serif;
+    font-size: 2.3rem;
+    color: rgba(68, 88, 99, 1);
+}
+
+
+.paragraph--5{
+    font-family: "Manjari", sans-serif;
+    font-size: 1.7rem;
+    color: rgba(68, 88, 99, 1);
 }

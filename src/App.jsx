@@ -5,6 +5,7 @@ import Profile from "./pages/profile/profile";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Projects from "./pages/projects/projects";
+import Scribblet from "./pages/scribblet/scribblet";
 import { split } from "./animations/text";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/scribbet" element={<Scribblet />} />
       </Routes>
     </AnimatePresence>
   )

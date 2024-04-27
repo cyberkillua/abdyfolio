@@ -20,7 +20,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/scribbet" element={<Scribblet />} />
+        <Route path="/scribblet" element={<Scribblet />} />
       </Routes>
     </AnimatePresence>
   )

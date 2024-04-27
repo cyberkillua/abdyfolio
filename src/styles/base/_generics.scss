@@ -21,6 +21,10 @@
     font-size: 1.5rem;
     line-height: 2.055rem;
     font-weight: 400;
+
+    @include mobile{
+        font-size: 1.2rem;
+    }
 }
 
 ul {
@@ -41,12 +45,20 @@ span.word_wrap {
     font-family: "Manjari", sans-serif;
     font-size: 3rem;
     color: black;
+
+    @include mobile{
+        font-size:2rem;
+    }
 }
 
 .paragraph--4{
     font-family: "Manjari", sans-serif;
     font-size: 2.3rem;
     color: rgba(68, 88, 99, 1);
+
+    @include mobile{
+        font-size: 1.7rem;
+    }
 }
 
 
@@ -54,4 +66,8 @@ span.word_wrap {
     font-family: "Manjari", sans-serif;
     font-size: 1.7rem;
     color: rgba(68, 88, 99, 1);
+
+    @include mobile{
+        font-size: 1.3rem;
+    }
 }

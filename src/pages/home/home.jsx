@@ -4,7 +4,8 @@ import { useSelector } from "react-redux";
 import Button from "../../components/Button/button"
 import PageTransition from "../../components/page-transition/pageTransition"
 import './home.scss'
-import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Home = () => {
     const darkmode = useSelector((state) => state.darkMode?.darkMode)
@@ -43,40 +44,46 @@ const Home = () => {
     }
     const projects = [
         {
-            img: "/Scribblet.mp4",
+            img: "/scribblet.png",
             name: "Scribblet",
             platform: "iOS",
-            video: true
+            video: false,
+            link: "/scribblet"
         },
         {
-            img: "/Fezzant.mp4",
+            img: "/fezzant.png",
             name: "Fezzant",
             platform: "Website",
-            video: true
+            video: false,
+            link: "/#"
         },
         {
-            img: "/FOCUSFUSION.mp4",
+            img: "/focusFusion.png",
             name: "FocusFusion.AI",
             platform: "MacOS",
-            video: true
+            video: false,
+            link: "/#"
         },
         {
             img: "/widgetX.png",
             name: "WidgetX",
             platform: "VisionOS",
-            video: false
+            video: false,
+            link: "/#"
         },
         {
             img: "/baz.png",
             name: "BAZ",
             platform: "Fashion",
-            video: false
+            video: false,
+            link: "/#"
         },
         {
             img: "/cykea.png",
             name: "Cykea",
             platform: "Website",
-            video: false
+            video: false,
+            link: "/#"
         },
     ]
     return (
@@ -99,8 +106,14 @@ const Home = () => {
                             <div className="project_container" key={index}>
                                 {
                                     project.video ? (
-                                        <video loop muted src={project.img} onMouseEnter={() => playVideo(index)} onMouseLeave={() => pauseVideo(index)} > </video>
-                                    ) : (<img src={project.img} alt={project.name} />)
+                                        <Link>
+                                            <video loop muted src={project.img} onMouseEnter={() => playVideo(index)} onMouseLeave={() => pauseVideo(index)}> </video>
+                                        </Link>
+                                    ) : (
+                                        <Link to={project.link}>
+                                            <img src={project.img} alt={project.name} />
+                                        </Link>
+                                    )
                                 }
                                 <p className="project_name" darkmode={`${darkmode}`}>{project.name}</p>
                                 <p className="project_platform" darkmode={`${darkmode}`}>{project.platform}</p>

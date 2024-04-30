@@ -32,58 +32,67 @@ const Projects = () => {
 
     const projects = [
         {
-            img: "/Scribblet.mp4",
-            name: "Scribblet.AI",
+            img: "/scribblet.png",
+            name: "Scribblet",
             platform: "iOS",
-            video: true
+            video: false,
+            link: "/scribblet"
         },
         {
-            img: "/Fezzant.mp4",
+            img: "/fezzant.png",
             name: "Fezzant",
             platform: "Website",
-            video: true
+            video: false,
+            link: "/#"
         },
         {
-            img: "/FOCUSFUSION.mp4",
+            img: "/focusFusion.png",
             name: "FocusFusion.AI",
             platform: "MacOS",
-            video: true
+            video: false,
+            link: "/fusionFocus"
         },
         {
             img: "/widgetX.png",
             name: "WidgetX",
             platform: "VisionOS",
-            video: false
+            video: false,
+            link: "/#"
         },
         {
             img: "/baz.png",
             name: "BAZ",
             platform: "Fashion",
-            video: false
+            video: false,
+            link: "/#"
         },
         {
             img: "/cykea.png",
             name: "Cykea",
             platform: "Website",
-            video: false
+            video: false,
+            link: "/#"
         },
         {
-            img: "/Scribblet.mp4",
-            name: "Scribblet.AI",
+            img: "/scribblet.png",
+            name: "Scribblet",
             platform: "iOS",
-            video: true
+            video: false,
+            link: "/scribblet"
         },
         {
-            img: "/Scribblet.mp4",
-            name: "Scribblet.AI",
-            platform: "iOS",
-            video: true
+            img: "/fezzant.png",
+            name: "Fezzant",
+            platform: "Website",
+            video: false,
+            link: "/#"
         },
         {
-            img: "/Scribblet.mp4",
-            name: "Scribblet.AI",
-            platform: "iOS",
-            video: true
+            img: "/focusFusion.png",
+            name: "FocusFusion.AI",
+            platform: "MacOS",
+            video: false,
+            link: "/fusionFocus"
         },
 
     ]

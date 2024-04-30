@@ -62,7 +62,7 @@ const Home = () => {
             name: "FocusFusion.AI",
             platform: "MacOS",
             video: false,
-            link: "/#"
+            link: "/fusionFocus"
         },
         {
             img: "/widgetX.png",

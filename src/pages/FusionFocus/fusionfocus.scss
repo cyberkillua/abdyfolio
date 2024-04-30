@@ -1,0 +1,356 @@
+@import "../../styles/main.scss";
+
+
+.focus_wrapper {
+    background: #08081A;
+    padding: toRem(260) 0 toRem(150) toRem(86);
+
+    @include mobile {
+        padding: toRem(40) toRem(25) toRem(100) toRem(25);
+    }
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 4rem;
+        }
+
+        &_left {
+            max-width: toRem(700);
+            margin-top: 7rem;
+
+            img {
+                width: toRem(250);
+                margin-bottom: 2rem;
+            }
+
+            p {
+                margin-bottom: 3rem;
+            }
+
+            &_btn {
+                display: flex;
+                padding: 1rem 1.5rem;
+                background: #1456BA;
+                align-items: center;
+                font-size: 1.2rem;
+                border-radius: 1.5rem;
+
+
+                span {
+                    width: 1.5rem;
+                    height: 1.5rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+            }
+        }
+
+        img {
+            width: 60%;
+        }
+    }
+}
+
+.fusionfocus_container {
+    width: 100%;
+    padding: 8rem toRem(86) 0 0;
+
+    @include mobile {
+        padding-inline: toRem(25);
+    }
+
+    .intro {
+        display: flex;
+        margin-bottom: 9rem;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile {
+            margin-top: 4rem;
+            flex-direction: column;
+        }
+
+        p {
+            max-width: 70%;
+            text-align: center;
+            @include mobile{
+                max-width: 90%;
+            }
+        }
+    }
+
+    .logo,
+    .onMac {
+        display: flex;
+        flex-direction: column;
+
+        .logo-images,
+        .onMac-images {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            @include mobile {
+                flex-direction: column;
+            }
+
+            img {
+                width: 48%;
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .productive_hours {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        flex-direction: column;
+        width: 100%;
+
+        .heading {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                text-align: center;
+                max-width: 643px;
+            }
+        }
+
+        .home_stats {
+            align-self: center;
+            width: 80%;
+
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+
+    .activity {
+        position: relative;
+
+
+        .activity-1,
+        .activity-2,
+        .activity-3 {
+            margin-top: 4rem;
+            display: flex;
+            gap: 5rem;
+            justify-content: space-around;
+
+            @include mobile {
+                flex-direction: column;
+            }
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10rem;
+
+                p {
+                    max-width: 516px;
+                }
+            }
+
+            .activity_img {
+                width: 40%;
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+        .activity-2{
+            flex-direction: column-reverse;
+        }
+    }
+
+    .report,
+    .limit {
+        margin-top: 4rem;
+        padding: 4rem;
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        flex-direction: column;
+        width: 100%;
+
+        @include mobile {
+            padding: 1rem;
+            flex-direction: column;
+        }
+
+        &-content-heading {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            max-width: 818px;
+            text-align: center;
+
+            @include mobile{
+                max-width: 100%;
+            }
+        }
+
+        .stats,
+        .limit_img {
+            align-self: center;
+            width: 80%;
+
+            @include mobile{
+                width: 80vw;
+            }
+        }
+    }
+
+    .strict {
+        margin-top: 4rem;
+        padding: 8rem;
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            padding: 0;
+        }
+
+        &-header {
+            width: 74%;
+            // align-self: flex-end;
+            display: flex;
+            flex-direction: column;
+
+            @include mobile{
+                width: 100%;
+            }
+
+            .strict-wrapper {
+                max-width: 650px;
+                align-self: flex-end;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 6rem;
+
+                @include mobile{
+                    max-width: 100%;
+                }
+
+
+                p {
+                    align-self: flex-end;
+
+                    @include mobile{
+                        align-self: center;
+                    }
+                }
+            }
+        }
+
+        &_bottom {
+            display: flex;
+            gap: 5rem;
+
+            .strict_left {
+                display: flex;
+                align-items: flex-end;
+                gap: 3rem;
+                flex-direction: column;
+
+                .app_png {
+                    width: 60%;
+                }
+            }
+
+            .strict_right {
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    .alerts {
+        display: flex;
+        padding: 8rem;
+        margin-top: 4rem;
+        flex-direction: column;
+
+        @include mobile {
+            padding: 0;
+        }
+
+        .alert_content {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+
+            p {
+                margin-bottom: 6rem;
+                max-width: 818px;
+                text-align: center;
+            }
+        }
+
+        .bottom_images {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                width: 48%;
+            }
+        }
+    }
+
+    .pomodoro,
+    .website {
+        padding: 8rem;
+        margin-top: 7rem;
+        display: flex;
+        flex-direction: column;
+
+
+        @include mobile {
+            padding: 0;
+        }
+
+
+        p {
+            align-self: center;
+            max-width: 818px;
+            margin-bottom: 6rem;
+            text-align: center;
+        }
+
+        img {
+            align-self: center;
+            width: 80%;
+        }
+    }
+}
+
+.hero {}
+
+.number {
+    top: 3rem;
+    left: 0;
+    position: absolute;
+    height: 200px;
+    width: 91px;
+}

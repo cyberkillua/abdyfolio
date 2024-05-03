@@ -2,15 +2,11 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import PageTransition from "../../components/page-transition/pageTransition"
 import Button from "../../components/Button/button"
+import Navbar from "../../components/navbar/navbar";
 import "../projects/projects.scss"
-import Navbar from "../../components/navbar/navbar"
 
 const Projects = () => {
     const darkmode = useSelector((state) => state.darkMode?.darkMode)
-
-    useEffect(() => {
-        document.body.style = darkmode ? "rgba(207, 246, 255, 1)" : " #1632A0";
-    }, [])
 
     
     const playVideo = (id) => {
@@ -97,10 +93,10 @@ const Projects = () => {
 
     ]
     return (
-        <div className="wrapper" darkmode={`${darkmode}`}>
+        <div className="wrapper">
+            <Navbar/>
             <div className="profile_header">
-            <Button text={"contact me"} darkmodeBG={"rgba(0, 39, 191, 1)"} darkmodeTX={"rgba(207, 246, 255, 1)"} />
-                {/* <HomeIcon color={"#ffffff"} /> */}
+           
             </div>
             <div className="projects">
                 {

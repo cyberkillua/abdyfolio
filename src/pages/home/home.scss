@@ -6,46 +6,41 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: $primary;
     position: relative;
-    padding: toRem(40) toRem(90) toRem(150) toRem(90);
+    padding: 0 toRem(90) toRem(150) toRem(90);
     // height: 259vh;
-    transition: background-color 0.5s ease;
 
-    @include mobile{
+    @include mobile {
         padding: toRem(40) toRem(25) toRem(100) toRem(25);
     }
 
-    &[darkmode = true]{
-        background: rgba(207, 246, 255, 1);
-        transition: background-color 0.5s ease;
-    }
 
     .hero {
         display: flex;
         margin-top: toRem(100);
-        flex-direction: column;
-        height: 120vh;
+        height: 95vh;
         position: relative;
         justify-content: space-between;
-            @include respond-to-orientation(portrait){
-                height: 40vh;
-            }
 
+        @include respond-to-orientation(portrait) {
+            height: 40vh;
+        }
+
+        .hero_header{
+            height: fit-content;
+        }
         .hero_text {
-            max-width: 44.5rem;
+            max-width:50rem;
+            color: $text-100;
+            height: fit-content;
 
-            @include mobile{
+            @include mobile {
                 max-width: 340px;
             }
-            &[darkmode = true]{
-                color: rgba(18, 2, 215, 1);
-                transition: color 0.5s ease;
-            } 
         }
     }
 
-    .project{
+    .project {
         position: relative;
         z-index: 4;
         height: fit-content;
@@ -54,47 +49,40 @@
         row-gap: 5rem;
         flex-wrap: wrap;
 
-        @include respond-to-orientation(portrait){
+        @include respond-to-orientation(portrait) {
             flex-direction: column;
         }
 
-        &_container{
+        &_container {
             width: calc(100% / 3);
-            // overflow: hidden;
-            // border: 1px solid red;
-            @include respond-to-orientation(portrait){
+
+            @include respond-to-orientation(portrait) {
                 width: 100%;
-            } 
-            
-            img, video{
+            }
+
+            img,
+            video {
                 width: 100%;
                 cursor: pointer;
                 object-fit: contain;
             }
 
-            .project_name{
+            .project_name {
                 font-size: 2rem;
                 font-weight: 300;
                 color: #fff;
                 margin-top: 2rem;
-                &[darkmode = true]{
-                    color: rgba(0, 0, 0, 1);
-                    transition: color 0.5s ease;
-                } 
             }
 
-            .project_platform{
+            .project_platform {
                 font-size: 1.5rem;
                 font-weight: 300;
-                color: rgba(118, 222, 255, 1);
+                color: $text-100;
                 margin-top: 1rem;
-                &[darkmode = true]{
-                    color: rgba(0, 0, 0, 1);
-                    transition: color 0.5s ease;
-                } 
             }
         }
     }
+
     .background {
         position: absolute;
         object-fit: cover;
@@ -103,14 +91,14 @@
     .background-0,
     .background-2 {
         z-index: 1;
-        top: toRem(500);
+        top: toRem(700);
         width: 40%;
 
-        @include  mobile{
+        @include mobile {
             top: toRem(500);
         }
 
-        img{
+        img {
             width: 100%;
         }
 
@@ -128,36 +116,17 @@
     .background-1 {
         align-self: center;
         z-index: 0;
-        top: toRem(300);
+        top: toRem(400);
         width: 60%;
-        img{
+
+        img {
             width: 100%;
         }
-        @include  mobile{
+
+        @include mobile {
             top: toRem(400);
         }
 
     }
-}
-
-
-.bounce{
-    // transform: translateY(-20px);
-    animation: easeOutElastic .3s ease-in-out;
-}
-
-@keyframes easeOutElastic {
-	0% {
-		transform: translateY(0px);
-	}
-
-	50%{
-        transform: translateY(-20px);
-    }
-
-	100% {
-		transform: translateY(0px);
-	}
-
 }
 

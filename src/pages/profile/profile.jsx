@@ -15,7 +15,6 @@ const Profile = () => {
 
     return (
         <div className="profile" darkmode={`${darkmode}`}>
-            <Navbar iconColor={"rgba(255, 255, 255, 1)"} activeIconColor={"rgba(0, 39, 191, 1)"} />
             <div className="profile_wrapper">
                 <div className="profile_header">
                     <Button text={"contact me"} darkmodeBG={"rgba(0, 39, 191, 1)"} darkmodeTX={"rgba(207, 246, 255, 1)"} />

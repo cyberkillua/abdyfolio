@@ -88,15 +88,15 @@ const Home = () => {
     ]
     return (
         <main className="home_container" darkmode={`${darkmode}`}>
-            <Button text={"contact me"} darkmodeBG={"rgba(0, 39, 191, 1)"} darkmodeTX={"rgba(207, 246, 255, 1)"} />
+            <Navbar />
+            {/* <Navbar /> */}
             <section className="hero" >
+                <h2 className="hero_header header--2">Digital<br></br>Product Designer</h2>
                 <p className="paragraph--2 hero_text" darkmode={`${darkmode}`}>
                     I am a Designer and Product Manager currently at Fezzant.
-                    I love to build powerful and elegant products and
-                    I’m passionate about technology and what it can do for people.
+                    I love to build powerful and elegant products.
                 </p>
 
-                <Navbar iconColor={"rgba(255, 255, 255, 1)"} activeIconColor={"rgba(0, 39, 191, 1)"} />
             </section>
 
             <section className="project">

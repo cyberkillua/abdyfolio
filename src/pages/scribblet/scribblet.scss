@@ -10,7 +10,6 @@ img {
     background: rgba(251, 254, 255, 1);
     position: relative;
     padding: toRem(70) toRem(120) 0 toRem(120);
-
     @include mobile {
         padding: toRem(80) toRem(25) 0 toRem(25);
     }
@@ -26,19 +25,41 @@ img {
                 margin-bottom: 3rem;
             }
     
-            a {
-                padding: 1rem 3rem;
-                border-radius: 1rem;
-                font-size: 1.5rem;
-                text-decoration: none;
-                background: linear-gradient(221.02deg, #2965FF 31.98%, #053ED0 72.61%);
-                color: #fff;
-    
-                // @include mobile {
-                //     font-size: 1.2rem;
-                //     padding: .8rem 2.7rem;
-                // }
+            .btns{
+                display: flex;
+                gap: 2rem;
+
+                a {
+                    padding: 1rem 3rem;
+                    border-radius: 1rem;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    transition: all .5s ease-in-out;
+                    background: linear-gradient(221.02deg, #2965FF 31.98%, #053ED0 72.61%);
+                    color: #fff;
+        
+                }
+
+                .header_btn2{
+                    background: #ffffff;
+                    color: #053ED0;
+
+                    &:hover{
+                        background-color: #053ED0;
+                        color: #fff;
+                        transition: all .5s ease-in-out;
+                    }
+                }
+
+                .header_btn1{
+                    &:hover{
+                        background: #ffffff;
+                        color:#053ED0;
+                       
+                    }
+                }
             }
+          
         }
     
         .gallery {
@@ -223,6 +244,7 @@ img {
 
         h1 {
             text-align: center;
+            margin-bottom: 2rem;
         }
 
         img {

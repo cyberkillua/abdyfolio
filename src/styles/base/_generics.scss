@@ -57,6 +57,16 @@ span.word_wrap {
     font-family: "Manjari", sans-serif;
     font-size: 3rem;
     color: black;
+    font-weight: 300;
+
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+.header--01 {
+    font-family: "Manjari", sans-serif;
+    font-size: 3rem;
+    color: black;
 
     @include mobile {
         font-size: 2rem;
@@ -93,6 +103,7 @@ span.word_wrap {
 .paragraph--6 {
     font-family: "Inter", sans-serif;
     font-size: 2rem;
+    font-weight: 300;
 
     @include mobile{
         font-size: 1.6rem;
@@ -101,6 +112,7 @@ span.word_wrap {
 
 .paragraph--7 {
     font-family: "Inter", sans-serif;
+    font-weight: 300;
     font-size: 1.5rem;
 }
 

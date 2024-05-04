@@ -7,16 +7,21 @@ const Scribblet = () => {
     scroll()
     useEffect(() => {
         document.body.style.backgroundColor = 'white';
-    }, []); // Empty dependency array ensures that this effect runs only once after the component mounts
+
+        return () => document.body.style.backgroundColor = 'black'
+    }, []);
 
     return (
         <>
             <div className="scribblet">
                 <div className="scribblet_hero">
                     <div className="header">
-                        <h1 className="header--1">Scribblet.AI</h1>
+                        <h1 className="header--01">Scribblet.AI</h1>
                         <p className="paragraph--4">A MacOS app that automatically rates your apps based on, so you can identify and eliminate time-wasting distractions.</p>
-                        <a href="#" className="header_btn">Website</a>
+                        <div className="btns">
+                            <a href="#" className="header_btn1">Website</a>
+                            <a href="#" className="header_btn2">Download App</a>
+                        </div>
                     </div>
 
                     <div className="gallery">
@@ -35,9 +40,9 @@ const Scribblet = () => {
                     <h1 className="header--1">Onboarding</h1>
                     <div className="onboarding_gallery">
                         <div className="images">
-                            <img src="/Onboarding76.png" alt="" />
-                            <img src="/New-Lottie10.png" alt="" />
-                            <img src="/Onboarding74.png" alt="" />
+                            <img src="/Onboarding76.webp" alt="onboarding_img" />
+                            <img src="/New-Lottie10.webp" alt="newlottie_img" />
+                            <img src="/Onboarding74.webp" alt="edit_img" />
                         </div>
 
                     </div>
@@ -51,44 +56,44 @@ const Scribblet = () => {
                                 (Video or Image) to
                                 a recording
                             </p>
-                            <img src="/recording.png" alt="" />
+                            <img src="/recording.webp" alt="" />
                         </div>
                         <div className="gallery_item2">
                             <p className="paragraph--5">Loading Screen</p>
-                            <img src="/transcribing.png" alt="" />
+                            <img src="/transcribing.webp" alt="" />
                         </div>
                     </div>
                 </div>
 
                 <div className="results">
                     <h1 className="header--1">Recording results</h1>
-                    <img src="/refine.png" alt="" />
+                    <img src="/refine.webp" alt="refine_img" />
                 </div>
 
                 <div className="refine">
                     <h1 className="header--1">Refine results</h1>
-                    <img src="/Refine2.png" alt="" />
+                    <img src="/Refine2.webp" alt="resulty_img" />
                 </div>
 
                 <div className="home_page">
                     <h1 className="header--1">Homepage</h1>
-                    <img src="/home.png" alt="" />
+                    <img src="/home.webp" alt="home-img" />
                 </div>
                 <div className="widget">
                     <h1 className="header--1">Widgets</h1>
                     <div className="widget-gallery">
-                        <img src="/iPhone-Light.png" alt="" />
-                        <img src="/iPhone-Light2.png" alt="" />
-                        <img src="/iPhone-Light3.png" alt="" />
-                        <img src="/iPhone-Light4.png" alt="" />
+                        <img src="/iPhone-Light.webp" alt="" />
+                        <img src="/iPhone-Light2.webp" alt="" />
+                        <img src="/iPhone-Light3.webp" alt="" />
+                        <img src="/iPhone-Light4.webp" alt="" />
                     </div>
                 </div>
                 <div className="settings">
                     <h1 className="header--1">Settings</h1>
                     <div className="settings-gallery">
-                        <img src="/default-color.png" alt="" />
-                        <img src="/Settings.png" alt="" />
-                        <img src="/Widgets.png" alt="" />
+                        <img src="/default-color.webp" alt="" />
+                        <img src="/Settings.webp" alt="" />
+                        <img src="/Widgets.webp" alt="" />
                     </div>
                 </div>
 
@@ -97,19 +102,19 @@ const Scribblet = () => {
             <section className="appstore">
                 <h1 className="header--1">IOS Appstore Screenshots</h1>
                 <div className="appstore_gallery">
-                    <img src="/playstore6.png" alt="" />
-                    <img src="/playstore5.png" alt="" />
-                    <img src="/playstore3.png" alt="" />
-                    <img src="/playstore4.png" alt="" />
-                    <img src="/playstore2.png" alt="" />
-                    <img src="/playstore1.png" alt="" />
+                    <img src="/playstore6.webp" alt="" />
+                    <img src="/playstore5.webp" alt="" />
+                    <img src="/playstore3.webp" alt="" />
+                    <img src="/playstore4.webp" alt="" />
+                    <img src="/playstore2.webp" alt="" />
+                    <img src="/playstore1.webp" alt="" />
                 </div>
             </section>
 
 
             <section className="hero-section">
                 <h1 className="header--1">Website Hero Section</h1>
-                <img src="/website-hero-section.png" alt="" />
+                <img src="/website-hero-section.webp" alt="" />
             </section>
         </>
 

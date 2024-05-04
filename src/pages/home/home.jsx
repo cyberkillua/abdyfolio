@@ -1,5 +1,6 @@
 import Navbar from '../../components/navbar/navbar';
 import ReturnBtn from '../../components/returnUp/returnUpBtn';
+import { useEffect } from 'react';
 import scroll from "../../animations/scroll";
 import PageTransition from "../../components/page-transition/pageTransition"
 import './home.scss'
@@ -7,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     scroll()
+
     const Backgrounds = [
         {
             path: "/GOAT_1.png"

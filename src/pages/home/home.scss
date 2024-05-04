@@ -8,7 +8,6 @@
     flex-direction: column;
     position: relative;
     padding: 0 toRem(90) toRem(150) toRem(90);
-    // height: 259vh;
 
     @include mobile {
         padding: toRem(40) toRem(25) toRem(100) toRem(25);

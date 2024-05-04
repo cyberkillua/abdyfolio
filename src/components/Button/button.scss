@@ -20,5 +20,8 @@
     
     @include mobile{
         position: static;
+        margin-block: 2rem;
+        align-self: flex-start;
+        // display: none;
     }
 }

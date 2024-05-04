@@ -77,6 +77,11 @@ span.word_wrap {
     font-size: 4.5rem;
     line-height: 6rem;
     font-weight: 300;
+
+    @include mobile{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 }
 
 .paragraph--4 {

@@ -28,6 +28,10 @@
         padding: 1.7rem 2.7rem;
         gap: toRem(40);
         border-radius: toRem(73);
+
+        @include mobile{
+            display: none;
+        }
     }
 
     a{

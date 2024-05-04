@@ -25,6 +25,11 @@
             height: 40vh;
         }
 
+        @include mobile{
+            justify-content: flex-start;
+            gap: 2rem;
+            flex-direction: column;
+        }
         .hero_header{
             height: fit-content;
         }
@@ -94,7 +99,7 @@
         width: 40%;
 
         @include mobile {
-            top: toRem(500);
+            top: toRem(600);
         }
 
         img {
@@ -123,7 +128,7 @@
         }
 
         @include mobile {
-            top: toRem(400);
+            top: toRem(500);
         }
 
     }

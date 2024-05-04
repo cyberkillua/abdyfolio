@@ -1,6 +1,6 @@
 import Navbar from '../../components/navbar/navbar';
 import ReturnBtn from '../../components/returnUp/returnUpBtn';
-import { useEffect } from 'react';
+import useWindowSize from '../../hooks/useWindowSize';
 import scroll from "../../animations/scroll";
 import PageTransition from "../../components/page-transition/pageTransition"
 import './home.scss'
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     scroll()
-
+    const { isDesktop } = useWindowSize()
     const Backgrounds = [
         {
             path: "/GOAT_1.png"
@@ -63,7 +63,7 @@ const Home = () => {
         <main className="home_container">
             <Navbar />
             <section className="hero" >
-                <h2 className="hero_header header--2">Digital<br></br>Product Designer</h2>
+                <h2 className="hero_header header--2">Digital{ isDesktop && (<br></br>)} Product Designer</h2>
                 <p className="paragraph--2 hero_text">
                     I am a Designer and Product Manager currently at Fezzant.
                     I love to build powerful and elegant products.

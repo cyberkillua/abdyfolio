@@ -1,39 +1,45 @@
 import "../scribblet/scribblet.scss";
 import { useEffect } from "react";
+import scroll from "../../animations/scroll";
 import PageTransition from "../../components/page-transition/pageTransition";
 
 const Scribblet = () => {
+    scroll()
     useEffect(() => {
-        document.body.style = "rgba(238, 249, 255, 1)";
-    }, [])
+        document.body.style.backgroundColor = 'white';
+    }, []); // Empty dependency array ensures that this effect runs only once after the component mounts
+
     return (
         <>
             <div className="scribblet">
-                <div className="header">
-                    <h1 className="header--1">Scribblet.AI</h1>
-                    <p className="paragraph--4">A MacOS app that automatically rates your apps based on, so you can identify and eliminate time-wasting distractions.</p>
-                    <a href="#" className="header_btn">Website</a>
+                <div className="scribblet_hero">
+                    <div className="header">
+                        <h1 className="header--1">Scribblet.AI</h1>
+                        <p className="paragraph--4">A MacOS app that automatically rates your apps based on, so you can identify and eliminate time-wasting distractions.</p>
+                        <a href="#" className="header_btn">Website</a>
+                    </div>
+
+                    <div className="gallery">
+                        <div className="right">
+                            <img src="/record.webp" alt="" />
+                        </div>
+                        <div className="left">
+                            <img src="/menu.webp" alt="" />
+                            <img src="/footer.webp" alt="" />
+                        </div>
+                    </div>
                 </div>
 
-                <div className="gallery">
-                    <div className="right">
-                        <img src="/record.png" alt="" />
-                    </div>
-                    <div className="left">
-                        <img src="/menu.png" alt="" />
-                        <img src="/footer.png" alt="" />
-                    </div>
-                </div>
 
                 <div className="onboarding">
                     <h1 className="header--1">Onboarding</h1>
                     <div className="onboarding_gallery">
                         <div className="images">
                             <img src="/Onboarding76.png" alt="" />
-                            <img src="/Onboarding75.png" alt="" />
+                            <img src="/New-Lottie10.png" alt="" />
                             <img src="/Onboarding74.png" alt="" />
                         </div>
-                        <img src="/New-Lottie10.png" alt="" />
+
                     </div>
                 </div>
 

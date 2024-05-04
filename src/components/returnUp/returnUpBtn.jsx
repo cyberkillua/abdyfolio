@@ -55,7 +55,7 @@ const ReturnBtn = () => {
             {
                 isVisible && (
                     <motion.button className="returnBtn" variants={btnVisibility} initial="initial" animate="animate" exit="exit" onClick={handleScrollToTop} darkmode={`${darkmode}`}>
-                        <img src={darkmode ? "/light-arrow.svg" :  "/arrow-up.png" } alt="go up" />
+                        <img src="/arrow-up.svg" alt="go up" />
                     </motion.button>
                 )
             }

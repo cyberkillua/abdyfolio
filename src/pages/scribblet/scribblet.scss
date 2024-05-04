@@ -15,77 +15,79 @@ img {
         padding: toRem(80) toRem(25) 0 toRem(25);
     }
 
-
-    .header {
-        h1 {
-            margin-bottom: 1rem;
-        }
-
-        p {
-            max-width: 692px;
-            margin-bottom: 3rem;
-        }
-
-        a {
-            padding: 1rem 3rem;
-            border-radius: 1rem;
-            font-size: 1.5rem;
-            text-decoration: none;
-            background: linear-gradient(221.02deg, #2965FF 31.98%, #053ED0 72.61%);
-            color: #fff;
-
-            // @include mobile {
-            //     font-size: 1.2rem;
-            //     padding: .8rem 2.7rem;
-            // }
-        }
-    }
-
-    .gallery {
-        display: flex;
-        gap: toRem(60);
-
-        @include mobile {
-            margin-top: 4rem;
-            flex-direction: column;
-        }
-
-        .right {
-            display: flex;
-            flex: 1;
-
-            img {
-                justify-self: center;
-                width: 100%;
-                scale: .8;
-
-                @include mobile {
-                    scale: 1;
-                }
+    &_hero{
+        .header {
+            h1 {
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                max-width: 692px;
+                margin-bottom: 3rem;
+            }
+    
+            a {
+                padding: 1rem 3rem;
+                border-radius: 1rem;
+                font-size: 1.5rem;
+                text-decoration: none;
+                background: linear-gradient(221.02deg, #2965FF 31.98%, #053ED0 72.61%);
+                color: #fff;
+    
+                // @include mobile {
+                //     font-size: 1.2rem;
+                //     padding: .8rem 2.7rem;
+                // }
             }
         }
-
-        .left {
-            flex: 1;
+    
+        .gallery {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
+            gap: toRem(60);
+    
             @include mobile {
-                row-gap: 3rem;
+                margin-top: 4rem;
+                flex-direction: column;
             }
-
-            img {
-                width: 100%;
-                scale: .8;
-
+    
+            .right {
+                display: flex;
+                flex: 1;
+    
+                img {
+                    justify-self: center;
+                    width: 100%;
+                    scale: .8;
+    
+                    @include mobile {
+                        scale: 1;
+                    }
+                }
+            }
+    
+            .left {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+    
                 @include mobile {
-                    scale: 1;
+                    row-gap: 3rem;
+                }
+    
+                img {
+                    width: 100%;
+                    scale: .8;
+    
+                    @include mobile {
+                        scale: 1;
+                    }
                 }
             }
         }
     }
+   
 
     .onboarding {
         margin-top: 8rem;
@@ -225,12 +227,12 @@ img {
 
         img {
             align-self: center;
-            scale: 1 .8;
         }
     }
 
     .refine {
         display: flex;
+        margin-top: 8rem;
         flex-direction: column;
         @include mobile{
             margin-top: 5rem;

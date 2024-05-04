@@ -2,8 +2,8 @@ import Lenis from "@studio-freight/lenis";
 
 export default function scroll() {
     const lenis = new Lenis({
-        duration: 1.6,
-        easing: (t) => 1 - Math.pow(1 - t, 3),
+        duration: 2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         infinite: false,
         smooth: true,
     });

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
 import Button from "../Button/button";
@@ -25,6 +25,16 @@ const Navbar = () => {
     const handleNavOpen = () => {
         setNavopen(prevNavOpen => !prevNavOpen)
     }
+
+    useEffect(() => {
+        if(navOpen){
+            document.body.style.position = 'fixed';
+        }
+        return () => {
+            document.body.style.position = 'initial';
+        }
+    }, [navOpen])
+    
 
     return (
         <nav className="nav">

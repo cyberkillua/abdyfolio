@@ -65,8 +65,9 @@
             }
 
             img,
-            video {
+            .video {
                 width: 100%;
+                height: 460px;
                 cursor: pointer;
                 object-fit: contain;
             }

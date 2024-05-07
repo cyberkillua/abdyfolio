@@ -3,6 +3,9 @@ import Navbar from "../../components/navbar/navbar";
 import scroll from "../../animations/scroll"
 import "../projects/projects.scss"
 import ReturnBtn from "../../components/returnUp/returnUpBtn";
+import { Link } from "react-router-dom";
+import '@dotlottie/player-component';
+import { calcLength } from "framer-motion";
 
 const Projects = () => {
     scroll()
@@ -12,55 +15,68 @@ const Projects = () => {
             img: "/scribblet.webp",
             name: "Scribblet",
             platform: "iOS",
-            link: "/scribblet"
+            link: "/scribblet",
+            animation: true,
+            animationLink: "https://cdn.lottielab.com/l/3RgoTSGAd5vARf.json"
         },
         {
             img: "/fezzant.webp",
             name: "Fezzant",
             platform: "Website",
-            link: "/#"
+            link: "/#",
+            animation: false,
         },
         {
             img: "/focusFusion.jpg",
             name: "FocusFusion.AI",
             platform: "MacOS",
-            link: "/fusionFocus"
+            link: "/fusionFocus",
+            animation: true,
+            animationLink: "https://cdn.lottielab.com/l/9bp3Z3A4CpEnqc.json"
         },
         {
             img: "/widgetX.png",
             name: "WidgetX",
             platform: "VisionOS",
-            link: "/#"
+            link: "/#",
+            animation: false
         },
         {
             img: "/baz.webp",
             name: "BAZ",
             platform: "Fashion",
-            link: "/#"
+            link: "/#",
+            animation: true,
+            animationLink: "https://cdn.lottielab.com/l/5AWYYbcg4LSmQv.json"
         },
         {
             img: "/cykea.jpg",
             name: "Cykea",
             platform: "Website",
-            link: "/#"
+            link: "/#",
+            animation: false
         },
         {
             img: "/widgetX.png",
             name: "WidgetX",
             platform: "VisionOS",
-            link: "/#"
+            link: "/#",
+            animation: false
         },
         {
             img: "/baz.webp",
             name: "BAZ",
             platform: "Fashion",
-            link: "/#"
+            link: "/#",
+            animation: true,
+            animationLink: "https://cdn.lottielab.com/l/5AWYYbcg4LSmQv.json"
         },
         {
             img: "/cykea.jpg",
             name: "Cykea",
             platform: "Website",
-            link: "/#"
+            link: "/#",
+            animation: false
         },
 
     ]
@@ -75,7 +91,18 @@ const Projects = () => {
                     projects.map((project, index) => {
                         return (
                             <div className="projects_container" key={index}>
-                                <img src={project.img} alt={project.name} />
+                                {
+                                    project.animation ? (
+                                        <Link to={project}>
+                                            <dotlottie-player className="video" src={project.animationLink} autoplay loop />
+
+                                        </Link>
+                                    ) : (
+                                        <Link to={project.link}>
+                                            <img src={project.img} alt={project.name} />
+                                        </Link>
+                                    )
+                                }
                                 <p className="projects_name" >{project.name}</p>
                                 <p className="projects_platform" >{project.platform}</p>
                             </div>

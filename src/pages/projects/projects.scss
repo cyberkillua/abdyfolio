@@ -17,6 +17,7 @@
         height: fit-content;
         width: 100%;
         display: flex;
+        align-items: center;
         row-gap: 5rem;
         flex-wrap: wrap;
     
@@ -31,9 +32,9 @@
                 width: 100%;
             } 
             
-            img, video{
+            img,.video{
                 width: 100%;
-                object-fit: contain;
+                object-fit: cover;
             }
     
             .projects_name{

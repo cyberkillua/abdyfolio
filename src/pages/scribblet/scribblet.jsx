@@ -2,6 +2,7 @@ import "../scribblet/scribblet.scss";
 import { useEffect } from "react";
 import scroll from "../../animations/scroll";
 import PageTransition from "../../components/page-transition/pageTransition";
+import '@dotlottie/player-component';
 
 const Scribblet = () => {
     scroll()
@@ -41,7 +42,7 @@ const Scribblet = () => {
                     <div className="onboarding_gallery">
                         <div className="images">
                             <img src="/Onboarding76.webp" alt="onboarding_img" />
-                            <img src="/New-Lottie10.webp" alt="newlottie_img" />
+                            <dotlottie-player className="video" src="https://cdn.lottielab.com/l/7RksNMDYhPxaVn.json"  autoplay loop style={{ width: '30%', height: '0%' }} />
                             <img src="/Onboarding74.webp" alt="edit_img" />
                         </div>
 

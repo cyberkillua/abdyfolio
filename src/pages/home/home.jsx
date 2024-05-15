@@ -86,6 +86,7 @@ const Home = () => {
             </section>
 
             <section className="project">
+                
                 {
                     projects.map((project, index) => {
                         return (

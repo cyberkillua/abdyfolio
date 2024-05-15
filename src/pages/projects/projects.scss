@@ -11,40 +11,52 @@
         padding: toRem(40) toRem(25) toRem(100) toRem(25);
     }
     
-    .projects{
-        margin-top: toRem(151);
+    .profile_header{
+        // border: 1px solid red;
+        // h2{
+        //     text-align: start;
+        // }
+    }
+    .project {
+        position: relative;
         z-index: 4;
+        margin-top: 12rem;
         height: fit-content;
         width: 100%;
         display: flex;
-        align-items: center;
         row-gap: 5rem;
         flex-wrap: wrap;
-    
-        @include respond-to-orientation(portrait){
+
+        @include respond-to-orientation(portrait) {
             flex-direction: column;
         }
-    
-        &_container{
-            position: relative;
+
+        &_container {
             width: calc(100% / 3);
-            @include respond-to-orientation(portrait){
+            height: fit-content;
+            @include respond-to-orientation(portrait) {
                 width: 100%;
-            } 
-            
-            img,.video{
-                width: 100%;
-                object-fit: cover;
             }
-    
-            .projects_name{
+
+            .animation_cont {
+                width: 100%;
+                height: 460px;
+                overflow-y: hidden;
+                .project_img { 
+                    width: 100%;
+                    height: 100;
+                    cursor: pointer;
+                }
+            }
+
+            .project_name {
                 font-size: 2rem;
                 font-weight: 300;
                 color: #fff;
                 margin-top: 2rem;
             }
-    
-            .projects_platform{
+
+            .project_platform {
                 font-size: 1.5rem;
                 font-weight: 300;
                 color: $text-100;

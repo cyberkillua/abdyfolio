@@ -3,9 +3,12 @@ import Navbar from "../../components/navbar/navbar";
 import scroll from "../../animations/scroll"
 import "../projects/projects.scss"
 import ReturnBtn from "../../components/returnUp/returnUpBtn";
-import { Link } from "react-router-dom";
-import '@dotlottie/player-component';
-
+import fusionFocus from "../../focusfusion.json"
+import Baz from "../../Baz.json"
+import Fezzant from "../../fezzant.json"
+import Scribblet from "../../Scribblet.json"
+import { Link } from 'react-router-dom';
+import Lottie from 'lottie-react';
 const Projects = () => {
     scroll()
 
@@ -16,14 +19,15 @@ const Projects = () => {
             platform: "iOS",
             link: "/scribblet",
             animation: true,
-            animationLink: "https://cdn.lottielab.com/l/3RgoTSGAd5vARf.json"
+            animationFile: Scribblet
         },
         {
             img: "/fezzant.webp",
             name: "Fezzant",
             platform: "Website",
             link: "/#",
-            animation: false,
+            animation: true,
+            animationFile: Fezzant
         },
         {
             img: "/focusFusion.jpg",
@@ -31,7 +35,7 @@ const Projects = () => {
             platform: "MacOS",
             link: "/fusionFocus",
             animation: true,
-            animationLink: "https://cdn.lottielab.com/l/9bp3Z3A4CpEnqc.json"
+            animationFile: fusionFocus
         },
         {
             img: "/widgetX.png",
@@ -46,7 +50,7 @@ const Projects = () => {
             platform: "Fashion",
             link: "/#",
             animation: true,
-            animationLink: "https://cdn.lottielab.com/l/5AWYYbcg4LSmQv.json"
+            animationFile: Baz
         },
         {
             img: "/cykea.jpg",
@@ -56,11 +60,19 @@ const Projects = () => {
             animation: false
         },
         {
-            img: "/cykea.jpg",
-            name: "Cykea",
-            platform: "Website",
+            img: "/widgetX.png",
+            name: "WidgetX",
+            platform: "VisionOS",
             link: "/#",
             animation: false
+        },
+        {
+            img: "/baz.webp",
+            name: "BAZ",
+            platform: "Fashion",
+            link: "/#",
+            animation: true,
+            animationFile: Baz
         },
         {
             img: "/cykea.jpg",
@@ -69,39 +81,36 @@ const Projects = () => {
             link: "/#",
             animation: false
         },
-        {
-            img: "/cykea.jpg",
-            name: "Cykea",
-            platform: "Website",
-            link: "/#",
-            animation: false
-        },
-
     ]
     return (
         <div className="wrapper">
             <Navbar />
             <div className="profile_header">
-
+                {/* <h2>All Projects</h2> */}
             </div>
-            <div className="projects">
+            <div className="project">
                 {
                     projects.map((project, index) => {
                         return (
-                            <div className="projects_container" key={index}>
+                            <div className="project_container" key={index}>
                                 {
                                     project.animation ? (
                                         <Link to={project.link}>
-                                            <dotlottie-player className="video" src={project.animationLink} autoplay loop style={{ width: '100%', height: '460px' }} />
+                                            <div className='animation_cont'>
+                                                <Lottie animationData={project.animationFile} className='project_img' loop={true} />
+                                            </div>
                                         </Link>
                                     ) : (
                                         <Link to={project.link}>
-                                            <img src={project.img} alt={project.name} />
+                                            <div className='animation_cont'>
+                                                <img src={project.img} alt={project.name} className='project_img' />
+                                            </div>
                                         </Link>
                                     )
                                 }
-                                <p className="projects_name" >{project.name}</p>
-                                <p className="projects_platform" >{project.platform}</p>
+
+                                <p className="project_name" >{project.name}</p>
+                                <p className="project_platform">{project.platform}</p>
                             </div>
                         )
                     })

@@ -1,0 +1,38 @@
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: grid;
+    place-content: center;
+    background-color: #000000;
+    transform-origin: top;
+    width: 100vw;
+    height: 100vh;
+
+    .progress{
+        position: relative;
+        width: 460px;
+        .loader_background{
+            width: 100%;
+            height: 5px;
+            background-color: #494952;
+        }
+
+        .loader_gradient{
+            width: 50%;
+            position: absolute;
+            top: 0;
+            height: 5px;
+            transition: width .5s ease-in-out;
+            background: linear-gradient(92.83deg, #D4FC5F -24.23%, #DBFF73 -3.53%, #76DEFF 27.72%, #91DBFA 50.61%, #FF76FA 86.75%);
+        }
+    }
+    p {
+        font-size: 20px;
+        margin-top: 1rem;
+        font-weight: 300;
+        line-height: 30.6px;
+        color: #FFFFFF99;
+        text-align: center;
+    }
+}

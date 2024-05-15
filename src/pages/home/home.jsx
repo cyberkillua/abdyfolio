@@ -3,9 +3,13 @@ import ReturnBtn from '../../components/returnUp/returnUpBtn';
 import useWindowSize from '../../hooks/useWindowSize';
 import scroll from "../../animations/scroll";
 import PageTransition from "../../components/page-transition/pageTransition";
-import '@dotlottie/player-component';
 import './home.scss'
+import fusionFocus from "../../focusfusion.json"
+import Baz from "../../Baz.json"
+import Fezzant from "../../fezzant.json"
+import Scribblet from "../../Scribblet.json"
 import { Link } from 'react-router-dom';
+import Lottie from 'lottie-react';
 
 const Home = () => {
     scroll()
@@ -29,14 +33,15 @@ const Home = () => {
             platform: "iOS",
             link: "/scribblet",
             animation: true,
-            animationLink: "https://cdn.lottielab.com/l/3RgoTSGAd5vARf.json"
+            animationFile: Scribblet
         },
         {
             img: "/fezzant.webp",
             name: "Fezzant",
             platform: "Website",
             link: "/#",
-            animation: false,
+            animation: true,
+            animationFile: Fezzant,
         },
         {
             img: "/focusFusion.jpg",
@@ -44,7 +49,7 @@ const Home = () => {
             platform: "MacOS",
             link: "/fusionFocus",
             animation: true,
-            animationLink: "https://cdn.lottielab.com/l/9bp3Z3A4CpEnqc.json"
+            animationFile: fusionFocus
         },
         {
             img: "/widgetX.png",
@@ -59,7 +64,7 @@ const Home = () => {
             platform: "Fashion",
             link: "/#",
             animation: true,
-            animationLink: "https://cdn.lottielab.com/l/5AWYYbcg4LSmQv.json"
+            animationFile: Baz
         },
         {
             img: "/cykea.jpg",
@@ -87,10 +92,16 @@ const Home = () => {
                             <div className="project_container" key={index}>
                                 {
                                     project.animation ? (
-                                        <dotlottie-player className="video" src={project.animationLink} autoplay loop  style={{ width: '100%', height: '460px' }}/>
+                                        <Link to={project.link}>
+                                            <div className='animation_cont'>
+                                                <Lottie animationData={project.animationFile} className='project_img' loop={true} />
+                                            </div>
+                                        </Link>
                                     ) : (
                                         <Link to={project.link}>
-                                            <img src={project.img} alt={project.name} />
+                                            <div className='animation_cont'>
+                                                <img src={project.img} alt={project.name} className='project_img' />
+                                            </div>
                                         </Link>
                                     )
                                 }
@@ -105,7 +116,7 @@ const Home = () => {
             {
                 Backgrounds.map((background, index) => {
                     return (
-                        <div className={`background background-${index}`}>
+                        <div className={`background background-${index}`} key={index}>
                             <img src={background.path} alt={background.name} />
                         </div>
                     );

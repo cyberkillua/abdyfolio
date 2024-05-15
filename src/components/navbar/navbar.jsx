@@ -39,7 +39,7 @@ const Navbar = () => {
     return (
         <nav className="nav">
             <div className="logo">
-                <img src="/logo.svg" alt="logo" />
+                <img src="/logoA.svg" alt="logo" />
             </div>
             <ul className="nav_center" style={isMobile && navOpen ? { transform: 'translateX(0)' } : {}}>
             { isMobile && (<Button text={"Hire me!"} />) }       

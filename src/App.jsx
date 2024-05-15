@@ -12,13 +12,17 @@ import PageTransition from "./components/page-transition/pageTransition";
 // import FusionFocus from "./pages/fusionfocus/fusionFocus"
 // import FusionFocus from "./pages/fusionfocus/fusionfocus";
 import FusionFocus from "./pages/FusionFocus/fusionfocus";
+import Loader from "./components/loader/loader";
+import { Preloader } from "./utilis/preloader";
 
 function App() {
   const location = useLocation()
+  const { loaderVisible } = Preloader()
   useEffect(() => {
     // scroll()
     split()
   }, [])
+  
   return (
     <div className="container">
       <AnimatePresence mode="wait">
@@ -29,6 +33,7 @@ function App() {
           <Route path="/scribblet" element={<Scribblet />} />
           <Route path="/fusionFocus" element={<FusionFocus />} />
         </Routes>
+        <Loader loaderVisible={loaderVisible} />
       </AnimatePresence>
     </div>
   )

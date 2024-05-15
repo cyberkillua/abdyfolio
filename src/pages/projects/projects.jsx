@@ -85,8 +85,8 @@ const Projects = () => {
     return (
         <div className="wrapper">
             <Navbar />
-            <div className="profile_header">
-                {/* <h2>All Projects</h2> */}
+            <div className="project_header">
+                <h2>All Projects</h2>
             </div>
             <div className="project">
                 {

@@ -20,8 +20,8 @@ const useWindowSize = () => {
     };
   }, []);
 
-  const isMobile = windowSize.width <= 768; // Adjust the breakpoint as needed
-  const isDesktop = windowSize.width > 768; // Adjust the breakpoint as needed
+  const isMobile = windowSize.width <= 600; // Adjust the breakpoint as needed
+  const isDesktop = windowSize.width > 600; // Adjust the breakpoint as needed
 
   return { isMobile, isDesktop };
 };

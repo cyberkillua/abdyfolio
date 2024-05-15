@@ -13,14 +13,12 @@
 
     .project_header {
         margin-top: 7rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
 
-        h2 {
-            font-size: toRem(50);
-            font-weight: 300;
-            line-height: 61.2px;
-            text-align: start;
+        @include mobile{
+            margin-bottom: 2.5rem;
         }
+
     }
 
     .project {

@@ -97,7 +97,7 @@ const Projects = () => {
                                     project.animation ? (
                                         <Link to={project.link}>
                                             <div className='animation_cont'>
-                                                {/* <Lottie animationData={project.animationFile} className='project_img' loop={true} /> */}
+                                                <Lottie animationData={project.animationFile} className='project_img' loop={true} />
                                             </div>
                                         </Link>
                                     ) : (

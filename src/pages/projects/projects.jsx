@@ -86,7 +86,7 @@ const Projects = () => {
         <div className="wrapper">
             <Navbar />
             <div className="project_header ">
-                <h2 className=" header--2">All Projects</h2>
+                <h2>All Projects</h2>
             </div>
             <div className="project">
                 {

@@ -10,9 +10,13 @@ import Fezzant from "../../fezzant.json"
 import Scribblet from "../../Scribblet.json"
 import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
+import { Preloader } from '../../utilis/preloader';
+import gsap from 'gsap';
+import { useEffect } from 'react';
 
 const Home = () => {
     scroll()
+    const { loaderVisible, loadedImages } = Preloader()
     const { isDesktop } = useWindowSize()
     const Backgrounds = [
         {
@@ -74,11 +78,12 @@ const Home = () => {
             animation: false
         },
     ]
+
     return (
         <main className="home_container">
             <Navbar />
             <section className="hero" >
-                <h2 className="hero_header header--2">Digital{isDesktop && (<br></br>)} Product Designer</h2>
+                <h2 className="hero_header header--2">Digital{(isDesktop && <br></br>)} Product Designer</h2>
                 <p className="paragraph--2 hero_text">
                     I am a Designer and Product Manager currently at Fezzant.
                     I love to build powerful and elegant products.
@@ -86,7 +91,7 @@ const Home = () => {
             </section>
 
             <section className="project">
-                
+
                 {
                     projects.map((project, index) => {
                         return (

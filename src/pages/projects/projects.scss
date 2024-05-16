@@ -13,10 +13,18 @@
 
     .project_header {
         margin-top: 7rem;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
 
-        @include mobile{
+        @include mobile {
             margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 4rem;
+            font-weight: 300;
+            line-height: 61.2px;
+            text-align: start;
+
         }
 
     }
@@ -47,6 +55,10 @@
                 width: 100%;
                 height: toRem(750);
                 overflow-y: hidden;
+
+                @include mobile {
+                    height: toRem(500);
+                }
 
                 .project_img {
                     width: 100%;

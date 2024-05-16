@@ -83,7 +83,7 @@ const Home = () => {
         <main className="home_container">
             <Navbar />
             <section className="hero" >
-                <h2 className="hero_header header--2">Digital{(isDesktop && <br></br>)} Product Designer</h2>
+                <h2 className="hero_header header--2">Digital<br></br> Product Designer</h2>
                 <p className="paragraph--2 hero_text">
                     I am a Designer and Product Manager currently at Fezzant.
                     I love to build powerful and elegant products.

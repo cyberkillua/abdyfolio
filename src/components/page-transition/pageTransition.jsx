@@ -15,7 +15,6 @@ const PageTransition = (Component) => {
         );
     };
 
-    return PageTransitionComponent;
 };
 
 export default PageTransition;

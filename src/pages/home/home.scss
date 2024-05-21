@@ -61,15 +61,15 @@
         row-gap: 5rem;
         flex-wrap: wrap;
 
-        @include respond-to-orientation(portrait) {
-            flex-direction: column;
+        @include mobile {
+            // flex-direction: column;
         }
 
         &_container {
             width: calc(100% / 3);
             height: fit-content;
 
-            @include respond-to-orientation(portrait) {
+            @include mobile {
                 width: 100%;
             }
 

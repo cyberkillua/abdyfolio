@@ -13,7 +13,8 @@ const Loader = (prop) => {
                             <motion.div className="loader_wrapper" animate={{ opacity: 1 }} exit={{opacity: 0, duration: .3, delay: .1}}>
                                 <div className="progress">
                                     <div className="loader_background"></div>
-                                    <div className="loader_gradient" style={{ width: `${loadedImages}%` }} ></div>
+                                    <div className="loader_gradient" style={{ width: `${loadedImages}%` }}></div>
+                                    <p className="counter">{`${loadedImages}%`}</p>
                                 </div>
                             </motion.div>
                         )

@@ -9,9 +9,9 @@ import Fezzant from "../../fezzant.json"
 import Scribblet from "../../Scribblet.json"
 import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
+
 const Projects = () => {
     scroll()
-
     const projects = [
         {
             img: "/scribblet.webp",

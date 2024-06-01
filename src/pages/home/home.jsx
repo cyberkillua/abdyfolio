@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import { Preloader } from '../../utilis/preloader';
 import gsap from 'gsap';
-import { useEffect } from 'react';
 
 const Home = () => {
     scroll()
@@ -20,13 +19,13 @@ const Home = () => {
     const { isDesktop } = useWindowSize()
     const Backgrounds = [
         {
-            path: "/GOAT_1.png"
+            path: "A1.png"
         },
         {
-            path: "GOAT_3.png"
+            path: "A2.png"
         },
         {
-            path: "GOAT_2.png"
+            path: "A3.png"
         }
     ]
 
@@ -56,19 +55,11 @@ const Home = () => {
             animationFile: fusionFocus
         },
         {
-            img: "/widgetX.png",
-            name: "WidgetX",
-            platform: "VisionOS",
+            img: "/Banshee.png",
+            name: "Banshee",
+            platform: "MacOS & WindowsOS",
             link: "/#",
             animation: false
-        },
-        {
-            img: "/baz.webp",
-            name: "BAZ",
-            platform: "Fashion",
-            link: "/#",
-            animation: true,
-            animationFile: Baz
         },
         {
             img: "/cykea.jpg",
@@ -77,6 +68,15 @@ const Home = () => {
             link: "/#",
             animation: false
         },
+
+        {
+            img: "/Baz.png",
+            name: "BAZ",
+            platform: "Fashion",
+            link: "/#",
+            animation: false,
+            animationFile: Baz
+        },
     ]
 
     return (
@@ -84,10 +84,14 @@ const Home = () => {
             <Navbar />
             <section className="hero" >
                 <h2 className="hero_header header--2">Digital<br></br> Product Designer</h2>
-                <p className="paragraph--2 hero_text">
-                    I am a Designer and Product Manager currently at Fezzant.
-                    I love to build powerful and elegant products.
-                </p>
+
+                <div className="right">
+                    <p className="paragraph--2 hero_text">
+                        Crafting Inclusive & Intelligent Experiences.
+                        Let's craft something amazing together.
+                    </p>
+                    <p className='paragraph--2 hero_text hero_text_bottom'>Lets talk - <a href="mailto:abdymovicxi@gmail.com">abdymovicxi@gmail.com</a></p>
+                </div>
             </section>
 
             <section className="project">

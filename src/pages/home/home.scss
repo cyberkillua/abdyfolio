@@ -37,19 +37,31 @@
             color: transparent;
             background-image: linear-gradient(92.83deg, #D4FC5F -24.23%, #DBFF73 -3.53%, #76DEFF 27.72%, #91DBFA 50.61%, #FF76FA 86.75%);
             height: fit-content;
-            
+
         }
 
-        .hero_text {
-            max-width: 50rem;
-            color: $text-100;
+        .right {
             height: fit-content;
+            max-width: 35rem;
 
-            @include mobile {
-                max-width: 340px;
+            .hero_text {
+                color: $text-100;
+
+                @include mobile {
+                    max-width: 340px;
+                }
             }
-        }
 
+            .hero_text_bottom {
+                margin-top: 1rem;
+
+                a {
+                    color: #76DEFF;
+                    text-decoration: underline;
+                }
+            }
+
+        }
     }
 
     .project {

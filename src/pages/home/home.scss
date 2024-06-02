@@ -22,12 +22,11 @@
         justify-content: space-between;
 
         @include respond-to-orientation(portrait) {
-            height: 55vh;
+            height: 65vh;
         }
 
         @include md{
             height: 45vh;
-            // border: 1px solid red;
         }
 
         @include mobile {
@@ -106,7 +105,7 @@
         width: 40%;
 
         @include mobile {
-            top: toRem(600);
+            top: toRem(650);
         }
 
         img {
@@ -127,6 +126,7 @@
     .background-1 {
         align-self: center;
         z-index: 0;
+        border: 1px solid red;
         top: toRem(400);
         width: 60%;
 
@@ -135,7 +135,7 @@
         }
 
         @include mobile {
-            top: toRem(500);
+            top: toRem(550);
         }
 
     }

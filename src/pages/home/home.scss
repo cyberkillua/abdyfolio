@@ -87,10 +87,6 @@
         display: flex;
         row-gap: 5rem;
         flex-wrap: wrap;
-
-        @include mobile {
-            // flex-direction: column;
-        }
     }
 
     .background {
@@ -126,7 +122,7 @@
     .background-1 {
         align-self: center;
         z-index: 0;
-        border: 1px solid red;
+        border: 1px solid blue;
         top: toRem(400);
         width: 60%;
 
@@ -135,7 +131,7 @@
         }
 
         @include mobile {
-            top: toRem(550);
+            top: toRem(600);
         }
 
     }

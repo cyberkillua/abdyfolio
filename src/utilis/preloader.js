@@ -25,7 +25,7 @@ export const Preloader = () => {
         }
       };
     });
-  }, [loadedImages]);
+  }, []);
 
   return { loaderVisible, loadedImages };
 };

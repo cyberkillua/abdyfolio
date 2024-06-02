@@ -1,9 +1,8 @@
 import { Preloader } from "../../utilis/preloader";
 import { motion, AnimatePresence, } from "framer-motion";
-import { useState, useEffect } from "react";
 import "./loader.scss"
 const Loader = (prop) => {
-    const { loadedImages, loaderVisible } = Preloader()
+    const { loadedImages } = Preloader()
     return (
         <AnimatePresence mode="wait">
             {

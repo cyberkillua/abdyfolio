@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
 import Button from "../Button/button";
 import "./navbar.scss";
@@ -38,11 +38,11 @@ const Navbar = () => {
 
     return (
         <nav className="nav">
-            <div className="logo">
+            <Link  to="/" className="logo">
                 <img src="/logoA.svg" alt="logo" />
-            </div>
+            </Link>
             <ul className="nav_center" style={isMobile && navOpen ? { transform: 'translateX(0)' } : {}}>
-            { isMobile && (<Button text={"Hire me!"} />) }       
+            { isMobile && (<Button text={"Say Hello!"} />) }       
                 {
                     NavItem.map((navItem, index) => {
                         return (
@@ -55,7 +55,7 @@ const Navbar = () => {
                 }
             </ul>
             {
-                isDesktop &&  (<Button text={"Hire me!"} />)
+                isDesktop &&  (<Button text={"Say Hello!"} />)
             }
            {
              isMobile && (

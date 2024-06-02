@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
@@ -20,8 +20,8 @@ const useWindowSize = () => {
     };
   }, []);
 
-  const isMobile = windowSize.width <= 600; // Adjust the breakpoint as needed
-  const isDesktop = windowSize.width > 600; // Adjust the breakpoint as needed
+  const isMobile = windowSize.width <= 600; 
+  const isDesktop = windowSize.width > 600; 
 
   return { isMobile, isDesktop };
 };

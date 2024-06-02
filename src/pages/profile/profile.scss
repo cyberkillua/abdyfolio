@@ -14,40 +14,70 @@
         padding: toRem(40) toRem(25) toRem(200) toRem(25);
     }
 
-
-    &_header {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-    }
-
     .content {
         width: 100%;
         margin-top: 8rem;
-        justify-content: space-between;
+        column-gap: 25rem;
         display: flex;
 
         @include mobile {
             margin-top: 4rem;
-            flex-direction: column;
-            row-gap: 4rem;
+            flex-direction: column-reverse;
+            row-gap: 3rem;
         }
 
         &_left {
             max-width: 47rem;
-            align-self: center;
 
-            .content_header{
-                margin-bottom: 1rem;
+            @include mobile {
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                align-self: center;
             }
+
+            .content_header {
+                font-size: 3.5rem;
+                margin-bottom: .8rem;
+            }
+
             p {
                 color: $text-100;
+                margin-bottom: 3rem;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            p:first-of-type {
+                margin-bottom: .5rem;
+            }
+
+            p:nth-last-of-type(2) {
+                margin-bottom: 0;
+            }
+        }
+
+        .profile_right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .abdy {
+                width: 338.5px;
+                height: 349px;
             }
 
             .content_footer {
                 display: flex;
                 gap: 2rem;
-                margin-top: 4.5rem;
+                margin-block: 6rem 4rem;
+                height: fit-content;
+
+                @include mobile {
+                    margin-block: 2rem;
+                }
 
                 li {
                     width: toRem(60);
@@ -61,7 +91,6 @@
 
         &_paragraph {
             p {
-                margin-bottom: 3rem;
                 font-size: 1.5rem;
 
                 @include mobile {

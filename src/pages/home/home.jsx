@@ -1,22 +1,13 @@
+import './home.scss';
 import Navbar from '../../components/navbar/navbar';
 import ReturnBtn from '../../components/returnUp/returnUpBtn';
-import useWindowSize from '../../hooks/useWindowSize';
 import scroll from "../../animations/scroll";
 import PageTransition from "../../components/page-transition/pageTransition";
-import './home.scss'
-import fusionFocus from "../../focusfusion.json"
-import Baz from "../../Baz.json"
-import Fezzant from "../../fezzant.json"
-import Scribblet from "../../Scribblet.json"
-import { Link } from 'react-router-dom';
-import Lottie from 'lottie-react';
-import { Preloader } from '../../utilis/preloader';
-import gsap from 'gsap';
+import Project from '../../components/project/project';
+import projectArray from '../../components/projectArray';
 
 const Home = () => {
     scroll()
-    const { loaderVisible, loadedImages } = Preloader()
-    const { isDesktop } = useWindowSize()
     const Backgrounds = [
         {
             path: "A1.png"
@@ -29,55 +20,7 @@ const Home = () => {
         }
     ]
 
-    const projects = [
-        {
-            img: "/scribblet.webp",
-            name: "Scribblet",
-            platform: "iOS",
-            link: "/scribblet",
-            animation: true,
-            animationFile: Scribblet
-        },
-        {
-            img: "/fezzant.webp",
-            name: "Fezzant",
-            platform: "Website",
-            link: "/#",
-            animation: true,
-            animationFile: Fezzant,
-        },
-        {
-            img: "/focusFusion.jpg",
-            name: "FocusFusion.AI",
-            platform: "MacOS",
-            link: "/fusionFocus",
-            animation: true,
-            animationFile: fusionFocus
-        },
-        {
-            img: "/Banshee.png",
-            name: "Banshee",
-            platform: "MacOS & WindowsOS",
-            link: "/#",
-            animation: false
-        },
-        {
-            img: "/cykea.jpg",
-            name: "Cykea",
-            platform: "Website",
-            link: "/#",
-            animation: false
-        },
-
-        {
-            img: "/Baz.png",
-            name: "BAZ",
-            platform: "Fashion",
-            link: "/#",
-            animation: false,
-            animationFile: Baz
-        },
-    ]
+    const projectPreview = projectArray.slice(0, 6)
 
     return (
         <main className="home_container">
@@ -95,30 +38,10 @@ const Home = () => {
             </section>
 
             <section className="project">
-
                 {
-                    projects.map((project, index) => {
+                    projectPreview.map((project, index) => {
                         return (
-                            <div className="project_container" key={index}>
-                                {
-                                    project.animation ? (
-                                        <Link to={project.link}>
-                                            <div className='animation_cont'>
-                                                <Lottie animationData={project.animationFile} className='project_img' loop={true} />
-                                            </div>
-                                        </Link>
-                                    ) : (
-                                        <Link to={project.link}>
-                                            <div className='animation_cont'>
-                                                <img src={project.img} alt={project.name} className='project_img' />
-                                            </div>
-                                        </Link>
-                                    )
-                                }
-
-                                <p className="project_name" >{project.name}</p>
-                                <p className="project_platform">{project.platform}</p>
-                            </div>
+                           <Project project={project} key={index} />
                         )
                     })
                 }

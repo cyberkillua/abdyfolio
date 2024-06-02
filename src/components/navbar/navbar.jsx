@@ -42,7 +42,7 @@ const Navbar = () => {
                 <img src="/logoA.svg" alt="logo" />
             </Link>
             <ul className="nav_center" style={isMobile && navOpen ? { transform: 'translateX(0)' } : {}}>
-            { isMobile && (<Button text={"Say Hello!"} />) }       
+            { isMobile && (<a href="mailto:abdymovicxi@gmail.com"><Button text={"Say Hello!"} /></a>)}       
                 {
                     NavItem.map((navItem, index) => {
                         return (
@@ -55,8 +55,9 @@ const Navbar = () => {
                 }
             </ul>
             {
-                isDesktop &&  (<Button text={"Say Hello!"} />)
+                isDesktop &&  (<a href="mailto:abdymovicxi@gmail.com"><Button text={"Say Hello!"} /></a>)
             }
+
            {
              isMobile && (
                 <div className="hamburger" data-open={`${navOpen}`} onClick={handleNavOpen}>

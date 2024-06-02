@@ -6,12 +6,14 @@ import Title from "../../components/title/title.jsx";
 
 const FusionFocus = () => {
     scroll()
-    const { isMobile } = useWindowSize() 
+    const { isMobile } = useWindowSize()
+
     useEffect(() => {
         document.body.style.backgroundColor = '#08081A';
 
         return () => document.body.style.backgroundColor = 'black'
     }, []);
+
     return (
         <div className="focus_wrapper">
             <section className="hero">
@@ -20,7 +22,9 @@ const FusionFocus = () => {
                     <p className="paragraph--6">
                         FocusFusion: A MacOS app that automatically rates your apps based on, so you can identify and eliminate time-wasting distractions.
                     </p>
-                    <button className="hero_left_btn">Website <span><img src="/btn-arrow.png" alt="" /></span></button>
+                    <a href="https://focusfusion.app/">
+                        <button className="hero_left_btn">Website <span><img src="/btn-arrow.png" alt="" /></span></button>
+                    </a>
                 </div>
                 <img src="fusion_hero_background.webp" className="fusion_background" alt="" />
             </section>
@@ -30,17 +34,17 @@ const FusionFocus = () => {
                     <p className="paragraph--6">In todays busy world filled with distractions, focusing on work or studies, especially for those heavily relying on their PCs, has become a real challenge. Our goal is simple: enhance workflow, cut out distractions, and help you identify productivity patterns. Imagine avoiding those three-hour YouTube cat video marathons during crucial work moments. Were here to transform how you balance productivity and play.</p>
                 </section>
                 <section className="logo">
-                    <Title text={"logo"} align={ isMobile ? 'center' : 'flex-start'} />
+                    <Title text={"logo"} align={isMobile ? 'center' : 'flex-start'} />
                     <div className="logo-images">
                         <img src="/fusion_logo_2.webp" alt="" />
                         <img src="/fusion_logo_1.webp" alt="" />
                     </div>
                 </section>
                 <section className="onMac">
-                    <Title text={"on Mac"} align={ isMobile ? 'center' : 'flex-start'} />
+                    <Title text={"on Mac"} align={isMobile ? 'center' : 'flex-start'} />
                     <div className="onMac-images">
                         <img src="/onMac1.webp" alt="" />
-                        <img src="/onMac2.webp" alt="" /> 
+                        <img src="/onMac2.webp" alt="" />
                     </div>
                 </section>
                 <section className="productive_hours">
@@ -53,7 +57,7 @@ const FusionFocus = () => {
                 <section className="activity">
                     <div className="activity-1">
                         <div className="left">
-                            <Title text={"activity"} align={ isMobile ? 'center' : 'flex-start'} />
+                            <Title text={"activity"} align={isMobile ? 'center' : 'flex-start'} />
                             <p className="paragraph--7">The initial designed view of the productive hours is a bit different because its time spent against level of productivity,at the end of the day it was decided to group either prductive or unproductive instead of a score,  simply because theres a level of subjectivity in ratings accrorss Users.</p>
                         </div>
                         <img className="activity_img" src="/activity.webp" alt="" />
@@ -61,7 +65,7 @@ const FusionFocus = () => {
                     <div className="activity-2">
                         <img className="activity_img" src="/Timeline.webp" alt="" />
                         <div className="left">
-                            <Title text={"activity"} align={isMobile  ?  'center' : 'flex-start'} />
+                            <Title text={"activity"} align={isMobile ? 'center' : 'flex-start'} />
                             <p className="paragraph--7">The final design shows the timeline ina different view, and ita broken down to apps used or interacted in an hour, this view is simplified and apps or site visited are categorized as productive or unproductive</p>
                         </div>
                     </div>

@@ -16,6 +16,10 @@
         background: linear-gradient(92.83deg, #D4FC5F -24.23%, #DBFF73 -3.53%, #76DEFF 27.72%, #91DBFA 50.61%, #FF76FA 86.75%);
         transition: all .5s ease-in-out;
         cursor: pointer;
+
+        @include mobile{
+            background: #fff;
+        }
     }
     
     @include mobile{

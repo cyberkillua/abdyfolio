@@ -1,11 +1,9 @@
 import "./returnUpBtn.scss"
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
-import { useSelector } from "react-redux";
 
 
 const ReturnBtn = () => {
-    const darkmode = useSelector((state) => state.darkMode?.darkMode)
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -54,8 +52,8 @@ const ReturnBtn = () => {
         <AnimatePresence>
             {
                 isVisible && (
-                    <motion.button className="returnBtn" variants={btnVisibility} initial="initial" animate="animate" exit="exit" onClick={handleScrollToTop} darkmode={`${darkmode}`}>
-                        <img src={darkmode ? "/light-arrow.svg" :  "/arrow-up.png" } alt="go up" />
+                    <motion.button className="returnBtn" variants={btnVisibility} initial="initial" animate="animate" exit="exit" onClick={handleScrollToTop} >
+                        <img src="/arrow-up.svg" alt="go up" />
                     </motion.button>
                 )
             }

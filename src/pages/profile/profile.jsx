@@ -1,53 +1,66 @@
-import Button from "../../components/Button/button"
-import Navbar from "../../components/navbar/navbar"
-import { useEffect } from "react"
-import "./profile.scss"
-import PageTransition from "../../components/page-transition/pageTransition"
-import { useSelector } from "react-redux"
-
+import Button from "../../components/Button/button";
+import Navbar from "../../components/navbar/navbar";
+import "./profile.scss";
+import scroll from "../../animations/scroll";
+import PageTransition from "../../components/page-transition/pageTransition";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Profile = () => {
-    const darkmode = useSelector((state) => state.darkMode?.darkMode)
+    scroll()
 
-    useEffect(() => {
-        document.body.style = darkmode ? "rgba(207, 246, 255, 1)" : " #1632A0";
-    },  [])
+    const { isMobile } = useWindowSize()
 
     return (
-        <div className="profile" darkmode={`${darkmode}`}>
-            <Navbar iconColor={"rgba(255, 255, 255, 1)"} activeIconColor={"rgba(0, 39, 191, 1)"} />
+        <div className="profile">
             <div className="profile_wrapper">
-                <div className="profile_header">
-                    <Button text={"contact me"} darkmodeBG={"rgba(0, 39, 191, 1)"} darkmodeTX={"rgba(207, 246, 255, 1)"} />
-                </div>
+                <Navbar />
                 <main className="content">
                     <div className="content_left">
-                        <div className="content_paragraph" darkmode={`${darkmode}`}>
+                        <h1 className="header--2 content_header">About me</h1>
+                        <div className="content_paragraph">
+                            <p className="paragraph--2">Hi there!</p>
                             <p className="paragraph--2">
-                                I am a Designer and Product Manager currently at Fezzant.
-                                I love to build powerful and elegant products and I’m passionate about technology and what it can do for people.
+                                I’m Adam Abdullah, a passionate UI/UX Designer with over 4 years of experience crafting beautiful, intuitive, and inclusive digital experiences.  My skills span the entire design process, from user research and design thinking to wireframing, prototyping, and visual design (including strong typography and color theory).
                             </p>
+
                             <p className="paragraph--2">
-                                I am a Designer and Product Manager currently at Fezzant.
-                                I love to build powerful and elegant products and I’m passionate about technology and what it can do for people.
+                                <span>Accessibility Advocate</span> I ensure all users can benefit from the products I design, following WCAG guidelines and conducting user testing with diverse participants.
                             </p>
+
+                            <p className="paragraph--2">
+                                <span>Beyond Design</span> My experience in Product Management and as a Certified Scrum Master equips me with a well-rounded perspective on product development and leading cross-functional teams. I'm also proficient in design software like Figma, Spline, Adobe Illustrator, Photoshop,
+                            </p>
+                            <p className="paragraph--2">Thrilled to be at <a href="">Fezzant!</a> Contributing my expertise in design and management  to their mission of inclusive and accessible cybersecurity.</p>
                         </div>
-
-                        <ul className="content_footer">
-                            <li>
-                                <img src="/x.png" alt="" />
-                            </li>
-                            <li>
-                                <img src="/linkedin.png" alt="" />
-                            </li>
-                            <li>
-                                <img src="/behance.png" alt="" />
-                            </li>
-                        </ul>
-
+                        {
+                            isMobile && (<Button text={"Download Resume"} align={'center'} />)
+                        }
                     </div>
-                    <div className="profile_img">
-                        <img src={darkmode ? "Rectangle2.png" : "/Rectangle.png"} alt="abdy_picture" />
+                    <div className="profile_right">
+                        <img src="/abdy.png" className="abdy" alt="abdy" />
+                        <ul className="content_footer">
+                            <a href="https://twitter.com/Abdymovic10">
+                                <li>
+                                    <img src="/x.svg" alt="/twitter-icon" />
+                                </li>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/abdymovic/">
+                                <li>
+                                    <img src="/in.svg" alt="linkedin-icon" />
+                                </li>
+                            </a>
+
+                            <a href="https://dribbble.com/abdymovic">
+                                <li>
+                                    <img src="/dribble.png" alt="behance-icon" />
+                                </li>
+                            </a>
+                        </ul>
+                        {
+                            !isMobile && (<Button text={"Download Resume"} align={'center'} />)
+                        }
+
                     </div>
                 </main>
             </div>

@@ -4,6 +4,9 @@
 .focus_wrapper {
     background: #08081A;
     padding: toRem(260) 0 toRem(150) toRem(86);
+    background-image: url('/public/focusfusion_background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
 
     @include mobile {
         padding: toRem(40) toRem(25) toRem(100) toRem(25);
@@ -13,7 +16,6 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-
         @include mobile {
             flex-direction: column;
             row-gap: 4rem;
@@ -26,6 +28,7 @@
             img {
                 width: toRem(250);
                 margin-bottom: 2rem;
+
             }
 
             p {
@@ -54,8 +57,12 @@
             }
         }
 
-        img {
+        .fusion_background {
             width: 60%;
+
+            @include mobile{
+                width: 100%;
+            }
         }
     }
 }
@@ -83,7 +90,7 @@
             max-width: 70%;
             text-align: center;
             @include mobile{
-                max-width: 90%;
+                max-width: 100%;
             }
         }
     }
@@ -116,6 +123,7 @@
 
     .productive_hours {
         position: relative;
+        margin-top: 10rem;
         display: flex;
         gap: 4rem;
         flex-direction: column;
@@ -145,9 +153,8 @@
     }
 
     .activity {
+        margin-top: 10rem;
         position: relative;
-
-
         .activity-1,
         .activity-2,
         .activity-3 {
@@ -167,6 +174,7 @@
 
                 p {
                     max-width: 516px;
+                    text-align: center;
                 }
             }
 
@@ -179,14 +187,16 @@
             }
         }
         .activity-2{
-            flex-direction: column-reverse;
+            @include mobile{
+                flex-direction: column-reverse;
+            }
         }
     }
 
     .report,
     .limit {
-        margin-top: 4rem;
-        padding: 4rem;
+        margin-top: 5rem;
+        padding: 5rem;
         position: relative;
         display: flex;
         gap: 4rem;
@@ -222,7 +232,7 @@
     }
 
     .strict {
-        margin-top: 4rem;
+        margin-top: 2rem;
         padding: 8rem;
         display: flex;
         flex-direction: column;
@@ -233,7 +243,6 @@
 
         &-header {
             width: 74%;
-            // align-self: flex-end;
             display: flex;
             flex-direction: column;
 
@@ -257,6 +266,7 @@
                     align-self: flex-end;
 
                     @include mobile{
+                        text-align: center;
                         align-self: center;
                     }
                 }
@@ -289,10 +299,11 @@
     .alerts {
         display: flex;
         padding: 8rem;
-        margin-top: 4rem;
+        margin-top: 2rem;
         flex-direction: column;
 
         @include mobile {
+            margin-top: 6rem;
             padding: 0;
         }
 
@@ -305,6 +316,9 @@
                 margin-bottom: 6rem;
                 max-width: 818px;
                 text-align: center;
+                @include mobile{
+                    margin-bottom: 3rem;
+                }
             }
         }
 

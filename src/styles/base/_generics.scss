@@ -8,6 +8,16 @@
     font-weight: 400;
 }
 
+.paragraph--8{
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+
+    @include mobile{
+        font-size: 1.8rem;
+    }
+}
+
 .paragraph--2 {
     font-size: 1.7rem;
     line-height: 2.6rem;
@@ -32,6 +42,11 @@ ul {
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 span.word_wrap {
     overflow: hidden;
     display: inline-block;
@@ -46,9 +61,30 @@ span.word_wrap {
     font-family: "Manjari", sans-serif;
     font-size: 3rem;
     color: black;
+    font-weight: 300;
 
     @include mobile {
         font-size: 2rem;
+    }
+}
+.header--01 {
+    font-family: "Manjari", sans-serif;
+    font-size: 3rem;
+    color: black;
+
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+
+.header--2{
+    font-size: 4.5rem;
+    line-height: 6rem;
+    font-weight: 300;
+
+    @include mobile{
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
 }
 
@@ -76,6 +112,7 @@ span.word_wrap {
 .paragraph--6 {
     font-family: "Inter", sans-serif;
     font-size: 2rem;
+    font-weight: 300;
 
     @include mobile{
         font-size: 1.6rem;
@@ -84,5 +121,12 @@ span.word_wrap {
 
 .paragraph--7 {
     font-family: "Inter", sans-serif;
+    font-weight: 300;
     font-size: 1.5rem;
+}
+
+
+.icon-sm{
+    width: toRem(24);
+    height: toRem(24);
 }

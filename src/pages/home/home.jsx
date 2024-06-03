@@ -1,123 +1,46 @@
+import './home.scss';
 import Navbar from '../../components/navbar/navbar';
 import ReturnBtn from '../../components/returnUp/returnUpBtn';
-import { useSelector } from "react-redux";
-import Button from "../../components/Button/button"
-import PageTransition from "../../components/page-transition/pageTransition"
-import './home.scss'
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import scroll from "../../animations/scroll";
+import PageTransition from "../../components/page-transition/pageTransition";
+import Project from '../../components/project/project';
+import projectArray from '../../components/projectArray';
 
 const Home = () => {
-    const darkmode = useSelector((state) => state.darkMode?.darkMode)
-
-    useEffect(() => {
-        document.body.style = darkmode ? "rgba(207, 246, 255, 1)" : " #1632A0";
-    }, [])
-    // console.log(darkmode)
+    scroll()
     const Backgrounds = [
         {
-            path: "/GOAT_1.png"
+            path: "A1.png"
         },
         {
-            path: "GOAT_3.png"
+            path: "A2.png"
         },
         {
-            path: "GOAT_2.png"
+            path: "A3.png"
         }
     ]
 
-    const playVideo = (id) => {
-        const vid = document.querySelectorAll("video")
-        vid.forEach((vid, index) => {
-            if (id === index) {
-                vid.play()
-            }
-        });
-    }
-    const pauseVideo = (id) => {
-        const vid = document.querySelectorAll("video")
-        vid.forEach((vid, index) => {
-            if (id === index) {
-                vid.pause()
-            }
-        });
-    }
-    const projects = [
-        {
-            img: "/scribblet.png",
-            name: "Scribblet",
-            platform: "iOS",
-            video: false,
-            link: "/scribblet"
-        },
-        {
-            img: "/fezzant.png",
-            name: "Fezzant",
-            platform: "Website",
-            video: false,
-            link: "/#"
-        },
-        {
-            img: "/focusFusion.png",
-            name: "FocusFusion.AI",
-            platform: "MacOS",
-            video: false,
-            link: "/fusionFocus"
-        },
-        {
-            img: "/widgetX.png",
-            name: "WidgetX",
-            platform: "VisionOS",
-            video: false,
-            link: "/#"
-        },
-        {
-            img: "/baz.png",
-            name: "BAZ",
-            platform: "Fashion",
-            video: false,
-            link: "/#"
-        },
-        {
-            img: "/cykea.png",
-            name: "Cykea",
-            platform: "Website",
-            video: false,
-            link: "/#"
-        },
-    ]
+    const projectPreview = projectArray.slice(0, 6)
     return (
-        <main className="home_container" darkmode={`${darkmode}`}>
-            <Button text={"contact me"} darkmodeBG={"rgba(0, 39, 191, 1)"} darkmodeTX={"rgba(207, 246, 255, 1)"} />
+        <main className="home_container">
+            <Navbar />
             <section className="hero" >
-                <p className="paragraph--2 hero_text" darkmode={`${darkmode}`}>
-                    I am a Designer and Product Manager currently at Fezzant.
-                    I love to build powerful and elegant products and
-                    I’m passionate about technology and what it can do for people.
-                </p>
+                <h2 className="hero_header header--2">Digital<br></br> Product Designer</h2>
 
-                <Navbar iconColor={"rgba(255, 255, 255, 1)"} activeIconColor={"rgba(0, 39, 191, 1)"} />
+                <div className="right">
+                    <p className="paragraph--2 hero_text">
+                        Crafting Inclusive & Intelligent Experiences.
+                        Let's craft something amazing together.
+                    </p>
+                    <p className='paragraph--2 hero_text hero_text_bottom'>Lets talk - <a href="mailto:abdymovicxi@gmail.com">abdymovicxi@gmail.com</a></p>
+                </div>
             </section>
 
             <section className="project">
                 {
-                    projects.map((project, index) => {
+                    projectPreview.map((project, index) => {
                         return (
-                            <div className="project_container" key={index}>
-                                {
-                                    project.video ? (
-                                        <Link>
-                                            <video loop muted src={project.img} onMouseEnter={() => playVideo(index)} onMouseLeave={() => pauseVideo(index)}> </video>
-                                        </Link>
-                                    ) : (
-                                        <Link to={project.link}>
-                                            <img src={project.img} alt={project.name} />
-                                        </Link>
-                                    )
-                                }
-                                <p className="project_name" darkmode={`${darkmode}`}>{project.name}</p>
-                                <p className="project_platform" darkmode={`${darkmode}`}>{project.platform}</p>
-                            </div>
+                           <Project project={project} key={index} />
                         )
                     })
                 }
@@ -125,7 +48,7 @@ const Home = () => {
             {
                 Backgrounds.map((background, index) => {
                     return (
-                        <div className={`background background-${index}`}>
+                        <div className={`background background-${index}`} key={index}>
                             <img src={background.path} alt={background.name} />
                         </div>
                     );

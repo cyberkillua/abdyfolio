@@ -1,0 +1,38 @@
+@import "../../styles/main.scss";
+.project_container {
+    width: calc(100% / 3);
+    height: fit-content;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    .animation_cont {
+        width: 100%;
+        height: toRem(750);
+        overflow-y: hidden;
+
+        @include mobile {
+            height: 100%;
+        }
+
+        .project_img {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+
+    .project_name {
+        font-size: 2rem;
+        font-weight: 300;
+        color: #fff;
+        margin-top: 2rem;
+    }
+
+    .project_platform {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: $text-100;
+        margin-top: 1rem;
+    }
+}

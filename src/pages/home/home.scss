@@ -6,46 +6,80 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: $primary;
     position: relative;
-    padding: toRem(40) toRem(90) toRem(150) toRem(90);
-    // height: 259vh;
-    transition: background-color 0.5s ease;
+    padding: 0 toRem(90) toRem(150) toRem(90);
 
-    @include mobile{
-        padding: toRem(40) toRem(25) toRem(100) toRem(25);
+    @include mobile {
+        padding: toRem(40) toRem(35) toRem(100) toRem(35);
     }
 
-    &[darkmode = true]{
-        background: rgba(207, 246, 255, 1);
-        transition: background-color 0.5s ease;
-    }
 
     .hero {
         display: flex;
         margin-top: toRem(100);
-        flex-direction: column;
-        height: 120vh;
+        height: 95vh;
         position: relative;
         justify-content: space-between;
-            @include respond-to-orientation(portrait){
-                height: 40vh;
-            }
 
-        .hero_text {
-            max-width: 44.5rem;
+        @include respond-to-orientation(portrait) {
+            height: 55vh;
+        }
+
+        @include md{
+            height: 45vh;
+        }
+
+        @include mobile {
+            justify-content: flex-start;
+            gap: .3rem;
+            flex-direction: column;
+        }
+
+        .hero_header {
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(92.83deg, #D4FC5F -24.23%, #DBFF73 -3.53%, #76DEFF 27.72%, #91DBFA 50.61%, #FF76FA 86.75%);
+            height: fit-content;
 
             @include mobile{
-                max-width: 340px;
+                font-size: 3rem;
+                font-weight: 400;
+                line-height: 3.7rem; 
+                margin-bottom: 1rem;
             }
-            &[darkmode = true]{
-                color: rgba(18, 2, 215, 1);
-                transition: color 0.5s ease;
-            } 
+
+        }
+
+        .right {
+            height: fit-content;
+            max-width: 35rem;
+
+            .hero_text {
+                color: $text-100;
+
+                @include mobile {
+                    max-width: 340px;
+                }
+            }
+
+            .hero_text_bottom {
+                margin-top: 1rem;
+
+                a {
+                    color: #76DEFF;
+                    text-decoration: underline;
+                }
+
+                @include mobile{
+                    margin-top: .5rem;
+                }
+            }
+
         }
     }
 
-    .project{
+    .project {
         position: relative;
         z-index: 4;
         height: fit-content;
@@ -53,48 +87,8 @@
         display: flex;
         row-gap: 5rem;
         flex-wrap: wrap;
-
-        @include respond-to-orientation(portrait){
-            flex-direction: column;
-        }
-
-        &_container{
-            width: calc(100% / 3);
-            // overflow: hidden;
-            // border: 1px solid red;
-            @include respond-to-orientation(portrait){
-                width: 100%;
-            } 
-            
-            img, video{
-                width: 100%;
-                cursor: pointer;
-                object-fit: contain;
-            }
-
-            .project_name{
-                font-size: 2rem;
-                font-weight: 300;
-                color: #fff;
-                margin-top: 2rem;
-                &[darkmode = true]{
-                    color: rgba(0, 0, 0, 1);
-                    transition: color 0.5s ease;
-                } 
-            }
-
-            .project_platform{
-                font-size: 1.5rem;
-                font-weight: 300;
-                color: rgba(118, 222, 255, 1);
-                margin-top: 1rem;
-                &[darkmode = true]{
-                    color: rgba(0, 0, 0, 1);
-                    transition: color 0.5s ease;
-                } 
-            }
-        }
     }
+
     .background {
         position: absolute;
         object-fit: cover;
@@ -103,14 +97,14 @@
     .background-0,
     .background-2 {
         z-index: 1;
-        top: toRem(500);
+        top: toRem(700);
         width: 40%;
 
-        @include  mobile{
-            top: toRem(500);
+        @include mobile {
+            top: toRem(650);
         }
 
-        img{
+        img {
             width: 100%;
         }
 
@@ -128,36 +122,16 @@
     .background-1 {
         align-self: center;
         z-index: 0;
-        top: toRem(300);
+        top: toRem(400);
         width: 60%;
-        img{
+
+        img {
             width: 100%;
         }
-        @include  mobile{
-            top: toRem(400);
+
+        @include mobile {
+            top: toRem(600);
         }
 
     }
 }
-
-
-.bounce{
-    // transform: translateY(-20px);
-    animation: easeOutElastic .3s ease-in-out;
-}
-
-@keyframes easeOutElastic {
-	0% {
-		transform: translateY(0px);
-	}
-
-	50%{
-        transform: translateY(-20px);
-    }
-
-	100% {
-		transform: translateY(0px);
-	}
-
-}
-

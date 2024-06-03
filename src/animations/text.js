@@ -9,7 +9,6 @@ export  function split() {
     const I = document.querySelectorAll('[data-animation = "scale-svg"]')
     const B = document.querySelectorAll('[data-animation = "ball-in"]')
     const C = document.querySelectorAll('[data-animation = "card-in"]')
-    console.log(C)
 
     p.forEach((item) => {
         new SplitType(item, { types: "lines, words", })

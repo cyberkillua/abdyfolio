@@ -1,8 +1,8 @@
 @import "../../styles/main.scss";
 
-.slide_in{
+.slide_in {
     position: fixed;
-    z-index: 15;
+    z-index: 50;
     inset: 0;
     width: 100vw;
     height: 100vh;
@@ -10,13 +10,20 @@
     transform-origin: bottom;
 }
 
-.slide_out{
+.slide_out {
     position: fixed;
-    z-index: 15;
+    z-index: 50;
     inset: 0;
     width: 100vw;
+    display: grid;
+    place-content: center;
     height: 100vh;
     background-color:  #0f0f0f;
     transform-origin: top;
-    // display: none;
+
+    p{
+        text-transform: capitalize;
+        font-size: 3rem;
+    }
+
 }

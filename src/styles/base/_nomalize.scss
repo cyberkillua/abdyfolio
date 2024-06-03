@@ -1,6 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/sf-ui-text-2');
 @import '../abstract/mixins.scss';
-
+@import '../abstract/variables';
 
 html {
     font-size: 0.6944444444vw;
@@ -12,6 +12,7 @@ html {
     }
 }
 
+
 ::-webkit-scrollbar {
     display: none
   }
@@ -19,6 +20,7 @@ body {
     font-family: 'SF UI Text', sans-serif;
     width: 100vw;
     color: #fff;
+    background-color: $bg-100;
     @include mobile{
         cusor: none;
     }

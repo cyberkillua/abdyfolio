@@ -21,7 +21,6 @@ const Home = () => {
     ]
 
     const projectPreview = projectArray.slice(0, 6)
-
     return (
         <main className="home_container">
             <Navbar />

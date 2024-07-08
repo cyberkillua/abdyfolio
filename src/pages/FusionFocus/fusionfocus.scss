@@ -167,6 +167,7 @@
                 flex-direction: column;
             }
 
+
             .left {
                 display: flex;
                 flex-direction: column;
@@ -174,7 +175,7 @@
 
                 p {
                     max-width: 516px;
-                    text-align: center;
+                    text-align: left;
                 }
             }
 
@@ -368,3 +369,4 @@
     height: 200px;
     width: 91px;
 }
+

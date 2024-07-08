@@ -10,15 +10,17 @@ export default [
         platform: "iOS",
         link: "https://www.figma.com/proto/qe7Cqba2b9UJujHb4yCf55/Scribblet-Folio?node-id=0-17&viewport=471%2C521%2C0.06&t=D3ghNobyYXi2U3wv-0&scaling=min-zoom&starting-point-node-id=0%3A17",
         animation: true,
-        animationFile: Scribblet
+        animationFile: Scribblet,
+        loadExternaly: true
     },
     {
         img: "/fezzant.webp",
         name: "Fezzant",
         platform: "Website",
-        link: "https://develop.d2kp2nkz59nkz8.amplifyapp.com/",
+        link: "https://www.figma.com/proto/BV8SWXBRF4DHR8rT7nAQrS/Fezzant?page-id=0%3A1&node-id=1-1065&viewport=-283%2C2304%2C0.47&t=xU6TOxhIfFZ5LEsY-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A1065 ",
         animation: true,
         animationFile: Fezzant,
+        loadExternaly: true
     },
     {
         img: "/focusFusion.jpg",
@@ -26,6 +28,7 @@ export default [
         platform: "MacOS",
         link: "/fusionFocus",
         animation: true,
+        loadExternaly: true,
         animationFile: fusionFocus
     },
     {
@@ -40,6 +43,7 @@ export default [
         name: "Cykea",
         platform: "Website",
         link: "https://www.figma.com/proto/laIyD3V2dB1Oq64tTwqcEu/Cykea-Folio?node-id=1-7&viewport=414%2C813%2C0.16&t=Eeb5YBU3zK6lAu8i-0&scaling=min-zoom&starting-point-node-id=1%3A7",
+        loadExternaly: true,
         animation: false
     },
 
@@ -49,6 +53,7 @@ export default [
         platform: "Fashion",
         link: "https://www.figma.com/proto/oQEaBNlcOnevAPJpVF5HC1/Baz?node-id=314-2969&viewport=699%2C178%2C0.06&t=ADo2P9jqqhSra7oW-0&scaling=min-zoom&starting-point-node-id=314%3A2969",
         animation: true,
+        loadExternaly: true,
         animationFile: Baz
     },
 ]

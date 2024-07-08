@@ -7,7 +7,7 @@ const Project = ({ project }) => {
         <div className="project_container">
             {
                 project.animation ? (
-                    <Link to={project.link}>
+                    <Link to={project.link} target={project.loadExternaly ?  "_blank" : ""}>
                         <div className='animation_cont'>
                             <Lottie animationData={project.animationFile} className='project_img' loop={true} />
                         </div>

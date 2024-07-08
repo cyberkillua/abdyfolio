@@ -24,7 +24,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/fusionFocus" element={<FusionFocus />} />
+          <Route path="/focusfusion" element={<FusionFocus />} />
         </Routes>
         <Loader loaderVisible={loaderVisible} />
       </AnimatePresence>

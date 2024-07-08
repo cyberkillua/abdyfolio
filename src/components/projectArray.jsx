@@ -26,7 +26,7 @@ export default [
         img: "/focusFusion.jpg",
         name: "FocusFusion.AI",
         platform: "MacOS",
-        link: "/fusionFocus",
+        link: "/focusFusion",
         animation: true,
         loadExternaly: true,
         animationFile: fusionFocus

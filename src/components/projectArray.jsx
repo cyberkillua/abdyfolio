@@ -17,7 +17,7 @@ export default [
         img: "/fezzant.webp",
         name: "Fezzant",
         platform: "Website",
-        link: "https://www.figma.com/proto/BV8SWXBRF4DHR8rT7nAQrS/Fezzant?page-id=0%3A1&node-id=1-1065&viewport=-283%2C2304%2C0.47&t=xU6TOxhIfFZ5LEsY-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A1065 ",
+        link: "https://www.figma.com/proto/BV8SWXBRF4DHR8rT7nAQrS/Fezzant?page-id=0%3A1&node-id=1-1065&viewport=-283%2C2304%2C0.47&t=xU6TOxhIfFZ5LEsY-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A1065",
         animation: true,
         animationFile: Fezzant,
         loadExternaly: true

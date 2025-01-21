@@ -17,7 +17,7 @@ const Projects = () => {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${'2999fc88f2cfe4ee041ae0d94666fbbd75eabe142edfcb93dc12fefb79e8ed93e6609ac89179fe9d260c983f86a6f48eb780fa54a93040941ef50a7d5411eade1d6f1cd9761bb798e1fc35523780132e385cbb689fdc57417b8f5e4d3df1243ea74e2b67cd97e57c3a6060d4107fbd43f87e16a835472a4b38f7d89ea3d140c4'}`,
+                "Authorization": `Bearer ${'cc17b5539269615fbbef8c4dce8c28df9036188f146ce17dff8b59c7798f43cff7172c476f865363565c81d86577a1ef228fc67e0e5d47086bdb35b7140cb01cecb48356960b4539e37301aef63651aa0908cff33622a171414e5ed49e21bbacc4560fb9d9cc63de48318b5b714a7cd93d529cfc78572dcb842c18ef422052bd'}`,
             },
         });
         const data = await response.json();
@@ -31,7 +31,7 @@ const Projects = () => {
 
     const mappedProject = (project) =>
         project.data?.map((project) => ({
-            img: `http://localhost:1337/uploads/${project?.image?.hash}.png`,
+            img: `https://abdymovix-cms.onrender.com/uploads/${project?.image?.hash}.png`,
             name: project?.Title,
             platform: project?.Platform,
             link: project?.Link,

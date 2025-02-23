@@ -31,7 +31,7 @@ const Projects = () => {
 
     const mappedProject = (project) =>
         project.data?.map((project) => ({
-            img: `https://abdymovix-cms.onrender.com/uploads/${project?.image?.hash}.png`,
+            img: project?.image?.url,
             name: project?.Title,
             platform: project?.Platform,
             link: project?.Link,

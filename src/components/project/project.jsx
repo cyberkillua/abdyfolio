@@ -10,7 +10,7 @@ const Project = ({ project }) => {
                     <Link to={project.link} target={project.loadExternaly ? "_blank" : ""}>
                         <div className='animation_cont'>
                             <Lottie
-                                animationData={project.animationFile} className='project_img'
+                                animationData={project.animationFile}
                                 loop={true}
                             />
                         </div>
@@ -20,7 +20,7 @@ const Project = ({ project }) => {
                         <div className='animation_cont'>
                             <img
                                 src={project.img}
-                                alt={project.name} c
+                                alt={project.name}
                                 className='project_img' />
                         </div>
                     </Link>

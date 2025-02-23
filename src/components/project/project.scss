@@ -1,4 +1,5 @@
 @import "../../styles/main.scss";
+
 .project_container {
     width: calc(100% / 3);
     height: fit-content;
@@ -18,6 +19,7 @@
 
         .project_img {
             width: 100%;
+            height: 100%;
             object-fit: cover;
             cursor: pointer;
         }

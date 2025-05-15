@@ -6,6 +6,7 @@ import ReturnBtn from "../../components/returnUp/returnUpBtn";
 import Project from "../../components/project/project";
 import { useState, useEffect } from "react";
 import CardLoader from "../../components/Loaders/card-loader";
+import projectArray from "../../components/projectArray";
 
 const Projects = () => {
     const [projects, setProjects] = useState([])
@@ -48,21 +49,11 @@ const Projects = () => {
             </div>
             <div className="project">
                 {
-                    loading ? (
-                        <>
-                            {
-                                Array.from({ length: 6 }).map((_, index) => (
-                                    <CardLoader key={index} />
-                                ))
-                            }
-                        </>
-                    ) : (
-                        mappedProject(projects)?.map((project, index) =>
-                            <Project
-                                project={project}
-                                key={index}
-                            />)
-                    )
+                    projectArray.map((project, index) =>
+                        <Project
+                            project={project}
+                            key={index}
+                        />)
                 }
             </div>
             <ReturnBtn />

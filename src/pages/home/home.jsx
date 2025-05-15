@@ -6,7 +6,7 @@ import PageTransition from "../../components/page-transition/pageTransition";
 import Project from '../../components/project/project';
 import { useEffect, useState } from 'react';
 import CardLoader from '@/components/Loaders/card-loader';
-
+import projectArray from '../../components/projectArray';
 
 const Home = () => {
     const [projects, setProjects] = useState([])
@@ -54,7 +54,7 @@ const Home = () => {
         }))
 
 
-    const projectPreview = mappedProject(projects)?.slice(0, 6)
+    const projectPreview = projectArray.slice(0, 6)
 
     return (
         <main className="home_container">
@@ -73,26 +73,17 @@ const Home = () => {
 
             <section className="project">
                 {
-                    loading ? (
-                        <>
-                            {
-                                Array.from({ length: 6 }).map((_, index) => (
-                                    <CardLoader key={index} />
-                                ))
-                            }
-                        </>
-                    ) : (
-                        projectPreview?.map((project, index) => {
-                            return (
-                                <>
-                                    <Project
-                                        project={project}
-                                        key={index}
-                                    />
-                                </>
-                            )
-                        })
-                    )
+                    projectPreview?.map((project, index) => {
+                        return (
+                            <>
+                                <Project
+                                    project={project}
+                                    key={index}
+                                />
+                            </>
+                        )
+                    })
+
                 }
             </section>
             {
